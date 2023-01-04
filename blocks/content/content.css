@@ -1,0 +1,24 @@
+.content{
+  /* Экран */
+  width: 68.75%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  /* Отступы */
+  margin: 40px auto 66px auto;
+
+  /* Расположение */
+  z-index: 1;
+}
+
+@media screen and (max-width: 568px) {
+  .content{
+    /* Экран */
+    width: 88.125%;
+    gap: 36px;
+  
+    /* Отступы */
+    margin: 42px auto 48px auto;
+  }
+}

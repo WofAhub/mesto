@@ -1,0 +1,16 @@
+.footer{
+  /* Экран */
+  max-width: 318px;
+
+  /* Отступы */
+  margin: 0 0 0 15.625%;
+}
+
+@media screen and (max-width: 970px) {
+  .footer{
+    /* Экран */
+    max-width: 282px;
+    /* Отступы */
+    margin: 0 0 0 5.938%;
+}
+}

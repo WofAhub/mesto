@@ -1,0 +1,13 @@
+.elements{
+  /* Экран */
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(361px, 1fr));
+  grid-row-gap: 20px;
+  grid-column-gap: 17px;
+
+  /* Отступы */
+  padding: 0;
+  margin: 0 auto 0 auto;
+}

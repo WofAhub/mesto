@@ -1,0 +1,20 @@
+.pop-up__container{
+  /* Экран */
+  width: 358px;
+  height: 259px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* Отступы */
+  padding: 0;
+  margin: auto;
+}
+
+@media screen and (max-width: 568px) {
+  .pop-up__container{
+    /* Экран */
+    width: 238px;
+    height: 272px;
+  }
+}

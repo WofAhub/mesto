@@ -1,0 +1,13 @@
+.button{
+  /* Стиль */
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Наведение */
+.button:hover{
+    cursor: pointer;
+  }

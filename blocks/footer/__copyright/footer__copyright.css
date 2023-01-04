@@ -1,0 +1,22 @@
+.footer__copyright{
+  /* Текст */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #545454;
+
+  /* Отступы */
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 970px) {
+  .footer__copyright{
+    /* Текст */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;    
+}
+}

@@ -1,0 +1,15 @@
+.element{
+  /* Экарн */
+  position: relative;
+  width: 282px;
+  height: 361px;
+
+  /* Стиль */
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+
+  /* Отступы */
+  padding: 0;
+  margin: 0;
+}

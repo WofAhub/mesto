@@ -1,0 +1,10 @@
+.pop-up__container_field_name-edit{
+  /* Экран */
+  height: 27px;
+
+  /* Стиль */
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #cccccc;
+}

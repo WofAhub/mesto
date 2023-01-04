@@ -1,0 +1,22 @@
+.pop-up__display{
+  /* Экран */
+  width: 430px;
+  position: relative;
+
+  /* Стиль */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+
+  /* Отступы */
+  padding: 34px 0 37px 0;
+  margin: auto;
+}
+
+@media screen and (max-width: 568px) {
+  .pop-up__display{
+    /* Экран */
+    width: 282px;
+    padding: 25px 0 25px 0;
+  }
+}

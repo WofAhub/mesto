@@ -1,0 +1,21 @@
+.pop-up__container_field{
+  /* Экран */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  /* Текст */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+
+  /* Стиль */
+  border: none;
+
+  /* Отступы */
+  padding: 0;
+  margin: 0;
+}

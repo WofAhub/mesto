@@ -1,0 +1,30 @@
+.profile__description{
+  /* Текст */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  /* Отступы */
+  padding: 0;  
+  margin: 0;
+
+  /* Разметка */
+  grid-area: profile__description;
+}
+
+@media screen and (max-width: 970px) {
+  .profile__description{
+    height: 16px;
+
+    /* Текст */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+}

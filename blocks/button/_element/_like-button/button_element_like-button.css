@@ -1,0 +1,18 @@
+.button_element_like-button{
+  /* Экран */
+  width: 23px;
+  height: 19px;
+  
+  /* Стиль */
+  background-image: url(../../../../images/like-button.svg);
+  border: none;
+
+  /* Отступы */
+  padding: 0;
+  margin: 0;
+}
+
+/* Наведение */
+.button_element_like-button:hover{
+  opacity: 50%;
+}

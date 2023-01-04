@@ -1,0 +1,34 @@
+.button_pop-up_save-button{
+  /* Экран */
+  width: 100%;
+  height: 50px;
+
+  /* Текст */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+
+  /* Стиль */
+  background-color: black;
+  border: none;
+  border-radius: 2px;
+}
+
+/* Наведение */
+.button_pop-up_save-button:hover{
+  opacity: 80%;
+}
+
+@media screen and (max-width: 568px) {
+  .button_pop-up_save-button{
+  /* Текст */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  }
+}
