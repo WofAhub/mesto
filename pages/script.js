@@ -11,9 +11,9 @@ let profiledescription = document.querySelector('.profile__description');
 let likebutton = document.querySelector('.button_element_like-button');
 // pop-up
 let popup = document.querySelector('.pop-up');
-let editname = document.querySelector('.pop-up__container_field_name-edit');
-let editdescription = document.querySelector('.pop-up__container_field_description-edit');
-let popupfield = document.querySelector('.pop-up__container_field');
+let editname = document.querySelector('.pop-up__name-edit');
+let editdescription = document.querySelector('.pop-up__description-edit');
+let popupfield = document.querySelector('.pop-up__field');
 
 // FUNCTIONS
 // POP-UP

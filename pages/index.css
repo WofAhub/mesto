@@ -48,18 +48,19 @@
 @import url(../blocks/pop-up/pop-up.css);
 @import url(../blocks/pop-up/__display/pop-up__display.css);
 @import url(../blocks/pop-up/__align/pop-up__align.css);
+/* field */
+@import url(../blocks/pop-up/__field/pop-up__field.css);
+/* edit */
+@import url(../blocks/pop-up/__description-edit/pop-up__description-edit.css);
+@import url(../blocks/pop-up/__name-edit/pop-up__name-edit.css);
 /* active */
 @import url(../blocks/pop-up/_type/_active/pop-up_type_active.css);
-/* pop-up__button */
+/* buttons */
 @import url(../blocks/pop-up/__button/_type/_close-button/pop-up__button_type_close-button.css);
 @import url(../blocks/pop-up/__button/_type/_save-button/pop-up__button_type_save-button.css);
-/* pop-up__container */
+/* container */
 @import url(../blocks/pop-up/__container/pop-up__container.css);
 @import url(../blocks/pop-up/__title/pop-up__title.css);
-/* pop-up__container_field */
-@import url(../blocks/pop-up/__container/_field/pop-up__container_field.css);
-@import url(../blocks/pop-up/__container/_field/_name-edit/pop-up__container_field_name-edit.css);
-@import url(../blocks/pop-up/__container/_field/_description-edit/pop-up__container_field_description-edit.css);
 
 /* FOOTER */
 @import url(../blocks/footer/footer.css);
