@@ -3,11 +3,12 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
+  flex-shrink: 0;
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
 }
 
 /* Наведение */
 .button:hover{
-    cursor: pointer;
-  }
+  cursor: pointer;
+}

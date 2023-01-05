@@ -2,12 +2,13 @@
   /* Экарн */
   position: relative;
   width: 282px;
-  height: 361px;
+  min-height: 361px;
 
   /* Стиль */
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
+  list-style: none;
 
   /* Отступы */
   padding: 0;

@@ -1,0 +1,19 @@
+.pop-up__form{
+  /* Экран */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 182px;
+  justify-content: space-between;
+
+  /* Отступы */
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 568px) {
+  .pop-up__form{
+    /* Экран */
+    min-height: 175px;
+  }
+}

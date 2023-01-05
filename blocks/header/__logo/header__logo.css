@@ -1,6 +1,7 @@
 .header__logo{
   /* Экран */
   width: 142px;
+  min-height: 33px;
 
   /* Отступы */
   padding: 0;

@@ -18,11 +18,7 @@
 
 @media screen and (max-width: 970px) {
   .profile__description{
-    /* Экран */
-    height: 16px;
-
     /* Текст */
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;

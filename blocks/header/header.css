@@ -1,37 +1,21 @@
 .header{
   /* Экран */
   max-width: 68.75%;
-  height: 74px;
+  min-height: 74px;
   display: flex;
   align-items: flex-start;
-  border-bottom: 1px solid #545454;
+  border-bottom: 1px solid rgba(84, 84, 84, 70%);
 
   /* Отступы */
   padding: 0;
   margin: 0 0 0 15.625%;
 }
 
-/* @media screen and (max-width: 1124px) {
-  .content{
-    margin-top: 48px;
-  }
-} */
-
-/* @media screen and (max-width: 984px) {
-  .content{
-    gap: 88px;
-    margin-top: 48px;
-    margin-bottom: 88px;
-  }
-} */
-
 @media screen and (max-width: 568px) {
   .header{
     /* Экран */
     max-width: 100%;
-    height: 56px;
-    display: flex;
-    align-items: flex-start;
+    min-height: 56px;
   
     /* Отступы */
     margin: 0;

@@ -1,0 +1,24 @@
+/* Placeholder: замена цвета */
+::-webkit-input-placeholder { /* WebKit browsers */
+  color:    black;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    black;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    black;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:    black;
+}
+
+.pop-up__edit{
+  /* Экран */
+  height: 27px;
+
+  /* Стиль */
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #cccccc;
+}

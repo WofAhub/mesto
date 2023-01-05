@@ -1,10 +1,10 @@
-.button_profile_edit-button{
+.button__edit-button{
   /* Экран */
   width: 24px;
   height: 24px;
 
   /* Стиль */
-  background-image: url(../../../../images/edit-button.svg);
+  background-image: url(../../../images/edit-button.svg);
   border: 1px solid white;
   background-size: 10px;
 
@@ -17,12 +17,12 @@
 }
 
 /* Наведение */
-.button_profile_edit-button:hover{
+.button__edit-button:hover{
   opacity: 60%;
 }
 
 @media screen and (max-width: 970px) {
-  .button_profile_edit-button{
+  .button__edit-button{
     /* Экран */
     width: 18px;
     height: 18px;

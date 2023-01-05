@@ -14,7 +14,6 @@
 @media screen and (max-width: 568px) {
   .pop-up__title{
     /* Текст */
-    font-style: normal;
     font-weight: 900;
     font-size: 18px;
     line-height: 22px;

@@ -1,7 +1,6 @@
 .profile{
   /* Экран */
   width: 100%;
-  height: 120px;
   display: flex;
   align-items: center;
 
@@ -13,8 +12,6 @@
 @media screen and (max-width: 970px) {
   .profile{
     /* Экран */
-    height: 286px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
