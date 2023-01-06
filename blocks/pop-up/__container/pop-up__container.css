@@ -1,8 +1,7 @@
-.pop-up__container{
+.pop-up__container {
   /* Экран */
   position: relative;
   width: 358px;
-  min-height: 259px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,10 +17,9 @@
 }
 
 @media screen and (max-width: 568px) {
-  .pop-up__container{
+  .pop-up__container {
     /* Экран */
     width: 238px;
-    min-height: 272px;
 
     /* Отступы */
     padding: 25px 22px;

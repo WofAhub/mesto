@@ -1,4 +1,4 @@
-.button_type_close-button{
+.button_type_close-button {
   /* Экран */
   width: 32px;
   height: 32px;
@@ -13,16 +13,16 @@
 }
 
 /* Наведение */
-.button_type_close-button:hover{
+.button_type_close-button:hover {
   opacity: 60%;
 }
 
 @media screen and (max-width: 568px) {
-.button_type_close-button{
-  /* Экран */
-  width: 20px;
-  height: 20px;
-  top: -40px;
-  right: 0;
-}
+  .button_type_close-button {
+    /* Экран */
+    width: 20px;
+    height: 20px;
+    top: -40px;
+    right: 0;
+  }
 }

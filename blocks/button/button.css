@@ -1,4 +1,4 @@
-.button{
+.button {
   /* Стиль */
   background-color: transparent;
   background-repeat: no-repeat;
@@ -9,6 +9,6 @@
 }
 
 /* Наведение */
-.button:hover{
+.button:hover {
   cursor: pointer;
 }

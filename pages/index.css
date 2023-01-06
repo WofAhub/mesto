@@ -40,10 +40,10 @@
 /* ELEMENTS */
 @import url(../blocks/elements/elements.css);
 /* element */
-@import url(../blocks/elements/element/element.css);
-@import url(../blocks/elements/element/__items/element__items.css);
-@import url(../blocks/elements/element/__title/element__title.css);
-@import url(../blocks/elements/element/__img/element__img.css);
+@import url(../blocks/element/element.css);
+@import url(../blocks/element/__items/element__items.css);
+@import url(../blocks/element/__title/element__title.css);
+@import url(../blocks/element/__img/element__img.css);
 
 /* POP-UP */
 @import url(../blocks/pop-up/pop-up.css);

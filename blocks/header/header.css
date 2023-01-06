@@ -1,4 +1,4 @@
-.header{
+.header {
   /* Экран */
   max-width: 68.75%;
   min-height: 74px;
@@ -12,11 +12,11 @@
 }
 
 @media screen and (max-width: 568px) {
-  .header{
+  .header {
     /* Экран */
     max-width: 100%;
     min-height: 56px;
-  
+
     /* Отступы */
     margin: 0;
   }

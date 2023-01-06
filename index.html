@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Четвёртая проектная работа Андрея на Яндекс.Практикуме">
-    <meta name="keywords" content="html,css,grid">
-    <meta name="author" content="Андрей">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Четвёртая проектная работа Андрея на Яндекс.Практикуме" />
+    <meta name="keywords" content="html,css,grid" />
+    <meta name="author" content="Андрей" />
     <title>Mesto</title>
-    <link rel="stylesheet" href="./pages/index.css">
+    <link rel="stylesheet" href="./pages/index.css" />
   </head>
 
   <body class="body page">
-
     <!-- HEADER -->
     <header class="header">
-      <img class="header__logo" src="./images/logo.svg" alt="лого">
+      <img class="header__logo" src="./images/logo.svg" alt="лого" />
     </header>
     <!-- /HEADER -->
 
-
     <main class="content">
-
       <!-- PROFILE -->
       <section class="profile">
-        <img class="profile__avatar" src="./images/Avatar.png" alt="аватар">
+        <img class="profile__avatar" src="./images/Avatar.png" alt="аватар" />
         <!-- profile__info -->
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -39,60 +36,59 @@
       <!-- ELEMENTS -->
       <section class="elements">
         <!-- Trappist-1C -->
-        <ul class="element">
-          <li class="element__img"><img src="./images/image-1.jpg" alt ="изображение-1"></li>
-          <!-- <div class="element__items"> -->
-          <li class="element__items">
+        <div class="element">
+          <img class="element__img" src="./images/image-1.jpg" alt="изображение-1" />
+          <div class="element__items">
             <h2 class="element__title">Trappist-1C</h2>
-            <!-- like-button изменено-->
+            <!-- like-button -->
             <button class="button button_type_like-button" type="button"></button>
-          </li>
-        </ul>
+          </div>
+        </div>
         <!-- Trappist-1H -->
-        <ul class="element">
-          <li class="element__img"><img src="./images/image-2.jpg" alt ="изображение-2"></li>
-          <li class="element__items">
+        <div class="element">
+          <img class="element__img" src="./images/image-2.jpg" alt="изображение-2" />
+          <div class="element__items">
             <h2 class="element__title">Trappist-1H</h2>
             <!-- like-button изменено-->
             <button class="button button_type_like-button" type="button"></button>
-          </li>
-        </ul>
+          </div>
+        </div>
         <!-- Trappist-1E -->
-        <ul class="element">
-          <li class="element__img"><img src="./images/image-3.jpg" alt ="изображение-3"></li>
-          <li class="element__items">
+        <div class="element">
+          <img class="element__img" src="./images/image-3.jpg" alt="изображение-3" />
+          <div class="element__items">
             <h2 class="element__title">Trappist-1E</h2>
             <!-- like-button изменено-->
             <button class="button button_type_like-button" type="button"></button>
-          </li>
-        </ul>
+          </div>
+        </div>
         <!-- HD 219134 B -->
-        <ul class="element">
-          <li class="element__img"> <img src="./images/image-4.jpg" alt ="изображение-4"></li>
-          <li class="element__items">
+        <div class="element">
+          <img class="element__img" src="./images/image-4.jpg" alt="изображение-4" />
+          <div class="element__items">
             <h2 class="element__title">HD&nbsp;219134&nbsp;B</h2>
             <!-- like-button изменено-->
             <button class="button button_type_like-button" type="button"></button>
-          </li>
-        </ul>
+          </div>
+        </div>
         <!-- Gliese 436-B -->
-        <ul class="element">
-          <li class="element__img"><img src="./images/image-5.jpg" alt ="изображение-5"></li>
-          <li class="element__items">
+        <div class="element">
+          <img class="element__img" src="./images/image-5.jpg" alt="изображение-5" />
+          <div class="element__items">
             <h2 class="element__title">Gliese 436-B</h2>
             <!-- like-button изменено-->
             <button class="button button_type_like-button" type="button"></button>
-          </li>
-        </ul>
+          </div>
+        </div>
         <!-- Proxima Centauri B -->
-        <ul class="element">
-          <li class="element__img"><img src="./images/image-6.jpg" alt ="изображение-6"></li>
-          <li class="element__items">
+        <div class="element">
+          <img class="element__img" src="./images/image-6.jpg" alt="изображение-6" />
+          <div class="element__items">
             <h2 class="element__title">Proxima Centauri&nbsp;B</h2>
             <!-- like-button изменено-->
             <button class="button button_type_like-button" type="button"></button>
-          </li>
-        </ul>
+          </div>
+        </div>
       </section>
       <!-- /ELEMENTS -->
     </main>
@@ -104,28 +100,27 @@
     <!-- /FOOTER -->
 
     <!-- POP-UP изменено-->
-      <section class="pop-up pop-up_overlay">
-        <!-- container изменено -->
-          <div class="pop-up__container">
-            <!-- close-button изменено -->
-            <button class="button button_type_close-button" type="button"></button>
-            <h3 class="pop-up__title">Редактировать профиль</h3>
-            <!-- form изменено -->
-            <form class="pop-up__form" name="pop-up-form">
-              <fieldset class="pop-up__field">
-                <input type="text" class="pop-up__edit pop-up__name-edit" placeholder="Жак-Ив Кусто" name="name-edit">
-                <input type="text" class="pop-up__edit pop-up__description-edit" placeholder="Исследователь океана" name="description-edit">
-                </fieldset>
-              <!-- save-button изменено -->
-              <button class="button button_type_save-button" type="submit">Сохранить</button>
-            </form>
-          </div>  
-      </section>
-      <!-- /POP-UP -->
+    <section class="pop-up pop-up_overlay">
+      <!-- container изменено -->
+      <div class="pop-up__container">
+        <!-- close-button изменено -->
+        <button class="button button_type_close-button" type="button"></button>
+        <h3 class="pop-up__title">Редактировать профиль</h3>
+        <!-- form изменено -->
+        <form class="pop-up__form" name="pop-up-form">
+          <fieldset class="pop-up__field">
+            <input type="text" class="pop-up__edit pop-up__edit_name" placeholder="Имя" name="name-edit" />
+            <input type="text" class="pop-up__edit pop-up__edit_description" placeholder="Описание" name="description-edit" />
+          </fieldset>
+          <!-- save-button изменено -->
+          <button class="button button_type_save-button" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </section>
+    <!-- /POP-UP -->
 
     <!-- SCRIPT -->
     <script src="./scripts/scripts.js"></script>
     <!-- /SCRIPT -->
   </body>
-
-</html>  
+</html>

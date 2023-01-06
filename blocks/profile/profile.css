@@ -1,4 +1,4 @@
-.profile{
+.profile {
   /* Экран */
   width: 100%;
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: 970px) {
-  .profile{
+  .profile {
     /* Экран */
     flex-direction: column;
     justify-content: space-between;

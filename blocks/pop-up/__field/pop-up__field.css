@@ -1,4 +1,4 @@
-.pop-up__field{
+.pop-up__field {
   /* Экран */
   width: 100%;
   display: flex;
@@ -17,5 +17,12 @@
 
   /* Отступы */
   padding: 0;
-  margin: 0;
+  margin: 0 0 48px 0;
+}
+
+@media screen and (max-width: 568px) {
+  /* Отступы */
+  .pop-up__field {
+    margin: 0 0 45px 0;
+  }
 }

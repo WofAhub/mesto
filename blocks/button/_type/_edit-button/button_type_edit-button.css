@@ -1,4 +1,4 @@
-.button_type_edit-button{
+.button_type_edit-button {
   /* Экран */
   width: 24px;
   height: 24px;
@@ -17,12 +17,12 @@
 }
 
 /* Наведение */
-.button_type_edit-button:hover{
+.button_type_edit-button:hover {
   opacity: 60%;
 }
 
 @media screen and (max-width: 970px) {
-  .button_type_edit-button{
+  .button_type_edit-button {
     /* Экран */
     width: 18px;
     height: 18px;

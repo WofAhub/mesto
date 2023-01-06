@@ -1,4 +1,4 @@
-.pop-up_type_active{
+.pop-up_type_active {
   visibility: visible;
   transform: translateY(0%) scale(100%);
 }

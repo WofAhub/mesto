@@ -1,4 +1,4 @@
-.profile__info{
+.profile__info {
   /* Экран */
   max-width: 336px;
   display: grid;
@@ -6,9 +6,9 @@
   row-gap: 16px;
 
   /* Разметка */
-  grid-template-areas: 
-  "profile__name profile__button_type_edit-button"
-  "profile__description profile__description";
+  grid-template-areas:
+    "profile__name profile__button_type_edit-button"
+    "profile__description profile__description";
 
   /* Отступы */
   padding: 0;
@@ -16,13 +16,12 @@
 }
 
 @media screen and (max-width: 970px) {
-  .profile__info{
+  .profile__info {
     /* Экран */
     max-width: 282px;
-  
+
     /* Отступы */
     margin: 0 0 36px 0;
     column-gap: 10px;
-    row-gap: 14px;
   }
 }

@@ -1,4 +1,4 @@
-.footer__copyright{
+.footer__copyright {
   /* Текст */
   font-style: normal;
   font-weight: 400;
@@ -12,10 +12,9 @@
 }
 
 @media screen and (max-width: 970px) {
-  .footer__copyright{
+  .footer__copyright {
     /* Текст */
-    font-weight: 400;
     font-size: 14px;
-    line-height: 17px;    
-}
+    line-height: 17px;
+  }
 }

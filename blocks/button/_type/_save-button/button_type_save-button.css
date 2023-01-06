@@ -1,4 +1,4 @@
-.button_type_save-button{
+.button_type_save-button {
   /* Экран */
   width: 100%;
   height: 50px;
@@ -9,29 +9,27 @@
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 
   /* Стиль */
   background-color: black;
   border: none;
   border-radius: 2px;
 
+  /* Отступы */
   padding: 0;
   margin: 0;
 }
 
 /* Наведение */
-.button_type_save-button:hover{
+.button_type_save-button:hover {
   opacity: 80%;
 }
 
 @media screen and (max-width: 568px) {
-  .button_type_save-button{
-  /* Текст */
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
+  .button_type_save-button {
+    /* Текст */
+    font-size: 14px;
+    line-height: 17px;
   }
 }

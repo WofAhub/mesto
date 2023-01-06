@@ -1,4 +1,4 @@
-.content{
+.content {
   /* Экран */
   width: 68.75%;
   display: flex;
@@ -13,11 +13,11 @@
 }
 
 @media screen and (max-width: 568px) {
-  .content{
+  .content {
     /* Экран */
     width: 88.125%;
     gap: 36px;
-  
+
     /* Отступы */
     margin: 42px auto 48px auto;
   }

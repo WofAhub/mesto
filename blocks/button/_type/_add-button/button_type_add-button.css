@@ -1,4 +1,4 @@
-.button_type_add-button{
+.button_type_add-button {
   /* Экран */
   min-width: 150px;
   height: 50px;
@@ -14,12 +14,12 @@
 }
 
 /* Наведение */
-.button__type_add-button:hover{
+.button_type_add-button:hover {
   opacity: 60%;
 }
 
 @media screen and (max-width: 970px) {
-  .button__add-button{
+  .button_type_add-button {
     /* Экран */
     width: 100%;
 
