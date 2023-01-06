@@ -1,9 +1,9 @@
 // LET
 // кнопки
-let editButton = document.querySelector('.button__edit-button');
-let closeButton = document.querySelector('.button__close-button');
-let saveButton = document.querySelector('.button__save-button');
-let likeButton = document.querySelector('.button__like-button');
+let editButton = document.querySelector('.button_type_edit-button');
+let closeButton = document.querySelector('.button_type_close-button');
+let saveButton = document.querySelector('.button_type_save-button');
+let likeButton = document.querySelector('.button_type_like-button');
 // profile
 let profileInfo = document.querySelector('.profile__info');
 let profileName = document.querySelector('.profile__name');
