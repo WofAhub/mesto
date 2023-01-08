@@ -10,8 +10,8 @@ let profileName = document.querySelector(".profile__name");
 let profileDescription = document.querySelector(".profile__description");
 // pop-up
 let popUp = document.querySelector(".pop-up");
-let descriptionEdit = document.querySelector(".pop-up__edit_description");
-let nameEdit = document.querySelector(".pop-up__edit_name");
+let descriptionEdit = document.querySelector(".pop-up__edit_type_description");
+let nameEdit = document.querySelector(".pop-up__edit_type_name");
 let form = document.querySelector(".pop-up__form");
 let popUpField = document.querySelector(".pop-up__field");
 
@@ -41,3 +41,9 @@ function save(evt) {
   close();
 }
 form.addEventListener("submit", save);
+
+// переключение между лайком и дизлайком
+likeButton.addEventListener('click', function (evt){
+  let eventTarget = evt.target;
+  evt.target.classList.toggle('button_type_liked-button');
+});

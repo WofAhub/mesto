@@ -26,10 +26,10 @@
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <p class="profile__description">Исследователь океана</p>
           <!-- edit-button изменено -->
-          <button class="button button_type_edit-button" type="button"></button>
+          <button class="button button_type_edit-button button__opacity" type="button"></button>
         </div>
         <!-- add-button изменено -->
-        <button class="button button_type_add-button" type="button"></button>
+        <button class="button button_type_add-button button__opacity" type="button"></button>
       </section>
       <!-- /PROFILE -->
 
@@ -99,20 +99,20 @@
     </footer>
     <!-- /FOOTER -->
 
-    <!-- POP-UP изменено-->
-    <section class="pop-up pop-up_overlay">
-      <!-- container изменено -->
+    <!-- POP-UP-->
+    <section class="pop-up pop-up_type_overlay">
+      <!-- container -->
       <div class="pop-up__container">
         <!-- close-button изменено -->
-        <button class="button button_type_close-button" type="button"></button>
+        <button class="button button_type_close-button button__opacity" type="button"></button>
         <h3 class="pop-up__title">Редактировать профиль</h3>
-        <!-- form изменено -->
+        <!-- form -->
         <form class="pop-up__form" name="pop-up-form">
           <fieldset class="pop-up__field">
-            <input type="text" class="pop-up__edit pop-up__edit_name" placeholder="Имя" name="name-edit" />
-            <input type="text" class="pop-up__edit pop-up__edit_description" placeholder="Описание" name="description-edit" />
+            <input type="text" class="pop-up__edit pop-up__edit_type_name" placeholder="Имя" name="name-edit" />
+            <input type="text" class="pop-up__edit pop-up__edit_type_description" placeholder="Описание" name="description-edit" />
           </fieldset>
-          <!-- save-button изменено -->
+          <!-- save-button -->
           <button class="button button_type_save-button" type="submit">Сохранить</button>
         </form>
       </div>

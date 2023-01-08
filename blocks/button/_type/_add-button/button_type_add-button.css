@@ -13,11 +13,6 @@
   margin: 0;
 }
 
-/* Наведение */
-.button_type_add-button:hover {
-  opacity: 60%;
-}
-
 @media screen and (max-width: 970px) {
   .button_type_add-button {
     /* Экран */

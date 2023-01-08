@@ -1,3 +1,4 @@
 .button_type_liked-button {
+  opacity: 1;
   background-image: url(../../../../images/liked-button.svg);
 }

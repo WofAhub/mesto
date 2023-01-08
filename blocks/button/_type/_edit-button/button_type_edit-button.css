@@ -16,11 +16,6 @@
   grid-area: profile__button_type_edit-button;
 }
 
-/* Наведение */
-.button_type_edit-button:hover {
-  opacity: 60%;
-}
-
 @media screen and (max-width: 970px) {
   .button_type_edit-button {
     /* Экран */

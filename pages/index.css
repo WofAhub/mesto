@@ -19,6 +19,7 @@
 
 /* BUTTONS */
 @import url(../blocks/button/button.css);
+@import url(../blocks/button/__opacity/button__opacity.css);
 /* profile */
 @import url(../blocks/button/_type/_edit-button/button_type_edit-button.css);
 @import url(../blocks/button/_type/_add-button/button_type_add-button.css);
@@ -47,7 +48,7 @@
 
 /* POP-UP */
 @import url(../blocks/pop-up/pop-up.css);
-@import url(../blocks/pop-up/_overlay/pop-up_overlay.css);
+@import url(../blocks/pop-up/_type/_overlay/pop-up_type_overlay.css);
 /* container */
 @import url(../blocks/pop-up/__container/pop-up__container.css);
 @import url(../blocks/pop-up/__title/pop-up__title.css);

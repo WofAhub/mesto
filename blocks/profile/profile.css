@@ -1,8 +1,10 @@
 .profile {
   /* Экран */
-  width: 100%;
+  min-width: 282px;
+  max-width: 880px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   /* Отступы */
   padding: 0;
@@ -13,6 +15,5 @@
   .profile {
     /* Экран */
     flex-direction: column;
-    justify-content: space-between;
   }
 }
