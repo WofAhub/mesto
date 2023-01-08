@@ -1,4 +1,4 @@
 /* Наведение */
-.button__opacity:hover {
+.button_opacity:hover {
   opacity: 60%;
 }

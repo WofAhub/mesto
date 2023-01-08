@@ -19,7 +19,7 @@
 
 /* BUTTONS */
 @import url(../blocks/button/button.css);
-@import url(../blocks/button/__opacity/button__opacity.css);
+@import url(../blocks/button/_opacity/button_opacity.css);
 /* profile */
 @import url(../blocks/button/_type/_edit-button/button_type_edit-button.css);
 @import url(../blocks/button/_type/_add-button/button_type_add-button.css);
