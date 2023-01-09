@@ -5,10 +5,13 @@
   background-position: center;
   flex-shrink: 0;
   opacity: 1;
+  cursor: pointer;
+
+  /* Анимация */
   transition: opacity 0.2s ease-in-out;
 }
 
 /* Наведение */
 .button:hover {
-  cursor: pointer;
+  opacity: .6;
 }

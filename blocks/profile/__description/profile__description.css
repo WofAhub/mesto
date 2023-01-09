@@ -1,9 +1,12 @@
 .profile__description {
+  /* Экран */
+  width: 294px;
+
   /* Текст */
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -20,7 +23,7 @@
   .profile__description {
     /* Текст */
     font-size: 14px;
-    line-height: 17px;
+    line-height: 100%;
     text-align: center;
   }
 }

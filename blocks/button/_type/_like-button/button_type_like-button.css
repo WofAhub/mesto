@@ -14,5 +14,5 @@
 
 /* Наведение */
 .button_type_like-button:hover {
-  opacity: 50%;
+  opacity: .5;
 }

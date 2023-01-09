@@ -19,10 +19,15 @@
 .pop-up__edit {
   /* Экран */
   height: 27px;
+  box-sizing: border-box;
 
   /* Стиль */
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #cccccc;
+
+  /* Отступы */
+  margin: 0;
+  padding: 0;
 }

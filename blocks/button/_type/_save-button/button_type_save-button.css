@@ -23,7 +23,7 @@
 
 /* Наведение */
 .button_type_save-button:hover {
-  opacity: 80%;
+  opacity: .8;
 }
 
 @media screen and (max-width: 568px) {
