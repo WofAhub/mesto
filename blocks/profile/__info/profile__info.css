@@ -3,7 +3,7 @@
   max-width: 336px;
   display: grid;
   column-gap: 18px;
-  row-gap: 16px;
+  row-gap: 7px;
 
   /* Разметка */
   grid-template-areas:
@@ -18,9 +18,15 @@
 @media screen and (max-width: 970px) {
   .profile__info {
     /* Экран */
-    max-width: 282px;
-    column-gap: 10px;
-    row-gap: 14px;
+    position: relative;
+    max-width: 189px;
+    column-gap: 0;
+    row-gap: 5px;
+
+    /* Разметка */
+    grid-template-areas:
+      "profile__name"
+      "profile__description";
 
     /* Отступы */
     margin: 0 0 36px 0;

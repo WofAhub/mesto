@@ -28,6 +28,9 @@
 
 @media screen and (max-width: 568px) {
   .button_type_save-button {
+    /* Экран */
+    height: 46px;
+    
     /* Текст */
     font-size: 14px;
     line-height: 17px;

@@ -6,7 +6,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 100%;
+  line-height: 22px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -21,9 +21,10 @@
 
 @media screen and (max-width: 970px) {
   .profile__description {
+    width: 100%;
     /* Текст */
     font-size: 14px;
-    line-height: 100%;
+    line-height: 17px;
     text-align: center;
   }
 }

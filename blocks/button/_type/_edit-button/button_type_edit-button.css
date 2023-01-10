@@ -19,11 +19,15 @@
 @media screen and (max-width: 970px) {
   .button_type_edit-button {
     /* Экран */
+    position: absolute;
+    top: 8px;
+    left: 199px;
+    right: 19px;
     width: 18px;
     height: 18px;
     background-size: 7.5px;
 
     /* Отступы */
-    margin-top: 8px;
+    margin: 0;
   }
 }
