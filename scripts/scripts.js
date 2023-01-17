@@ -31,7 +31,6 @@ const closeButtonEdit = popUpEdit.querySelector(".button_type_close-button");   
 const closeButtonAdd = popUpAdd.querySelector(".button_type_close-button");             // закрыть попап добавления
 
 
-
 // FUNCTIONS
 
 // активация попапов
@@ -79,7 +78,7 @@ addButton.addEventListener("click", () => {
 });
 
 // слушатель добавления карточки с помощью попапа добавления
-popUpAddForm.addEventListener("submit", createNewCard);
+popUpAddForm.addEventListener("submit", submitCreateNewCard);
 
 // слушатель закрытия попапа добавления
 closeButtonAdd.addEventListener("click", () => {
@@ -91,3 +90,14 @@ closeButtonAdd.addEventListener("click", () => {
 closeButtonImg.addEventListener("click", () => {
   popUpClose(popUpImg);
 });
+
+// рендер карточек
+function renderCards(){
+  initialCards.forEach(item => {
+    const cardHTML = createCard(item);
+
+    cardsContainer.append(cardHTML);
+  });
+}
+
+renderCards();

@@ -25,8 +25,6 @@ const initialCards = [
   }
 ];
 
-
-
 // const elements, elements-template
 const cardsContainer = document.querySelector(".elements");
 const elementsTemplate = document.querySelector("#elements-template")
@@ -36,29 +34,30 @@ const elementsTemplate = document.querySelector("#elements-template")
 
 
 // создание карточек
-function createCards(element){
-  const cards = elementsTemplate.cloneNode(true);
+function createCard(element){
+  const card = elementsTemplate.cloneNode(true);
 
-  const elementImg = cards.querySelector(".element__img");
+  const elementImg = card.querySelector(".element__img");
   elementImg.src = element.link;
-  const elementTitle = cards.querySelector(".element__title");
+  elementImg.alt = element.name;
+  const elementTitle = card.querySelector(".element__title");
   elementTitle.textContent = element.name;
 
   // удалить карточку
-  const deleteButton = cards.querySelector(".button_type_delete-button")
+  const deleteButton = card.querySelector(".button_type_delete-button")
   .addEventListener("click", function() {
-    cards.remove();
+    card.remove();
   });
 
   // лайкнуть карточку
-  const likeButton = cards.querySelector(".button_type_like-button")
+  const likeButton = card.querySelector(".button_type_like-button")
   .addEventListener("click", function(evt){
     const evtTarget = evt.target;
   evt.target.classList.toggle("button_type_liked-button");
   });
 
   // открыть карточку
-  const openImgButton = cards.querySelector(".element__img")
+  const openImgButton = card.querySelector(".element__img")
   .addEventListener("click", function(){
     popUpImgImg.src = element.link;
     popImgCaption.alt = element.name;
@@ -67,32 +66,19 @@ function createCards(element){
     popUpOpen(popUpImg);
   });
     
-  return cards;
+  return card;
 }
 
 
 
 // добавить карточку
-function createNewCard(evt) {
+function submitCreateNewCard(evt) {
   evt.preventDefault();
   const popUpImgName = popUpAddForm.querySelector(".pop-up__edit_type_img-name").value;
   const popUpLinkImg = popUpAddForm.querySelector(".pop-up__edit_type_link").value;
-  const element = createCards({name: popUpImgName, link: popUpLinkImg});
+  const element = createCard({name: popUpImgName, link: popUpLinkImg});
   cardsContainer.prepend(element);
   popUpClose(popUpAdd);
     
   popUpAddForm.reset();
 }
-
-
-
-// рендер карточек
-function renderCards(){
-  initialCards.forEach(item => {
-    const cardHTML = createCards(item);
-
-    cardsContainer.append(cardHTML);
-  });
-}
-
-renderCards();
