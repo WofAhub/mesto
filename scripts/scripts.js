@@ -45,7 +45,6 @@ function popUpClose(b) {
 };
 
 
-
 // активация попапа редактирования                         // ПОПАП РЕДКТИРОВАНИЯ
 editButton.addEventListener("click", () => {
   popUpOpen(popUpEdit);
@@ -74,7 +73,6 @@ function saveProfileInfo(evt) {
 formEdit.addEventListener("submit", saveProfileInfo);
 
 
-
 // активация попапа добавления                             // ПОПАП ДОБАВЛЕНИЯ
 addButton.addEventListener("click", () => {
   popUpOpen(popUpAdd);
@@ -87,7 +85,6 @@ popUpAddForm.addEventListener("submit", createNewCard);
 closeButtonAdd.addEventListener("click", () => {
   popUpClose(popUpAdd);
 });
-
 
 
 // дизактивация попапа изображения                         // ПОПАП ИЗОБРАЖЕНИЯ  
