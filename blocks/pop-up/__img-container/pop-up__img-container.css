@@ -1,0 +1,10 @@
+.pop-up__img-container{
+  /* Экран */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+  /* Отступы */
+  padding: 0;
+  margin: 0;
+}

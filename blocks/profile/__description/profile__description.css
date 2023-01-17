@@ -21,7 +21,9 @@
 
 @media screen and (max-width: 970px) {
   .profile__description {
+    /* Экран */
     width: 100%;
+    
     /* Текст */
     font-size: 14px;
     line-height: 17px;

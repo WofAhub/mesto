@@ -1,0 +1,38 @@
+.button__style {
+    /* Экран */
+    width: 100%;
+    height: 50px;
+  
+    /* Текст */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+  
+    /* Стиль */
+    background-color: black;
+    border: none;
+    border-radius: 2px;
+  
+    /* Отступы */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Наведение */
+  .button__style:hover {
+    opacity: .8;
+  }
+  
+  @media screen and (max-width: 568px) {
+    .button__style {
+      /* Экран */
+      height: 46px;
+      
+      /* Текст */
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }

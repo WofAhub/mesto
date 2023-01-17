@@ -1,5 +1,7 @@
 .profile__name {
+  /* Экран */
   max-width: 294px;
+  
   /* Текст */
   font-style: normal;
   font-weight: 500;

@@ -5,6 +5,8 @@
   object-fit: cover;
   display: block;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
   
   /* Отступы */
   padding: 0;

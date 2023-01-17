@@ -1,0 +1,18 @@
+.button_type_delete-button{
+  /* Экран */
+  width: 18px;
+  height: 19px;
+  position: absolute;
+  top: 20px;
+  left: 244px;
+  right: 20px;
+  z-index: 2;
+
+  /* Стиль */
+  background-image: url(../../../../images/delete-button.svg);
+  border: none;
+
+  /* Отступы */
+  padding: 0;
+  margin: 0;
+}

@@ -1,126 +1,110 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Четвёртая проектная работа Андрея на Яндекс.Практикуме" />
-    <meta name="keywords" content="html,css,grid" />
-    <meta name="author" content="Андрей" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Пятая проектная работа Андрея на Яндекс.Практикуме">
+    <meta name="keywords" content="html,css,grid">
+    <meta name="author" content="Андрей">
     <title>Mesto</title>
-    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="stylesheet" href="./pages/index.css">
   </head>
 
   <body class="body page">
-    <!-- HEADER -->
+
+    <!-- header -->
     <header class="header">
-      <img class="header__logo" src="./images/logo.svg" alt="лого" />
+      <img class="header__logo" src="./images/logo.svg" alt="лого">
     </header>
-    <!-- /HEADER -->
+    <!-- /header -->
 
     <main class="content">
-      <!-- PROFILE -->
+
+      <!-- profile -->
       <section class="profile">
-        <img class="profile__avatar" src="./images/Avatar.png" alt="аватар" />
-        <!-- profile__info -->
+        <img class="profile__avatar" src="./images/Avatar.png" alt="аватар">
         <div class="profile__info">
-          <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <p class="profile__description">Исследователь океана</p>
-          <!-- edit-button -->
+          <h1 class="profile__name">Jimmy Marble</h1>
+          <p class="profile__description">Фотограф и режиссер</p>
           <button class="button button_type_edit-button" type="button"></button>
         </div>
-        <!-- add-button -->
         <button class="button button_type_add-button" type="button"></button>
       </section>
-      <!-- /PROFILE -->
+      <!-- /profile -->
 
-      <!-- ELEMENTS -->
+      <!-- elements -->
       <section class="elements">
-        <!-- Trappist-1C -->
-        <div class="element">
-          <img class="element__img" src="./images/image-1.jpg" alt="изображение-1" />
-          <div class="element__items">
-            <h2 class="element__title">Две девушки</h2>
-            <!-- like-button -->
-            <button class="button button_type_like-button" type="button"></button>
-          </div>
-        </div>
-        <!-- Trappist-1H -->
-        <div class="element">
-          <img class="element__img" src="./images/image-2.jpg" alt="изображение-2" />
-          <div class="element__items">
-            <h2 class="element__title">Многоручка</h2>
-            <!-- like-button -->
-            <button class="button button_type_like-button" type="button"></button>
-          </div>
-        </div>
-        <!-- Trappist-1E -->
-        <div class="element">
-          <img class="element__img" src="./images/image-3.jpg" alt="изображение-3" />
-          <div class="element__items">
-            <h2 class="element__title">Большая шляпа</h2>
-            <!-- like-button -->
-            <button class="button button_type_like-button" type="button"></button>
-          </div>
-        </div>
-        <!-- HD 219134 B -->
-        <div class="element">
-          <img class="element__img" src="./images/image-4.jpg" alt="изображение-4" />
-          <div class="element__items">
-            <h2 class="element__title">Белая роза в руках</h2>
-            <!-- like-button -->
-            <button class="button button_type_like-button" type="button"></button>
-          </div>
-        </div>
-        <!-- Gliese 436-B -->
-        <div class="element">
-          <img class="element__img" src="./images/image-5.jpg" alt="изображение-5" />
-          <div class="element__items">
-            <h2 class="element__title">Девушка</h2>
-            <!-- like-button -->
-            <button class="button button_type_like-button" type="button"></button>
-          </div>
-        </div>
-        <!-- Proxima Centauri B -->
-        <div class="element">
-          <img class="element__img" src="./images/image-6.jpg" alt="изображение-6" />
-          <div class="element__items">
-            <h2 class="element__title">Девушка в мишуре</h2>
-            <!-- like-button -->
-            <button class="button button_type_like-button" type="button"></button>
-          </div>
-        </div>
+
       </section>
-      <!-- /ELEMENTS -->
+      <!-- /elements -->
+
     </main>
 
-    <!-- FOOTER -->
+    <!-- footer -->
     <footer class="footer">
       <p class="footer__copyright">&copy;&nbsp;2020 Mesto Russia</p>
     </footer>
-    <!-- /FOOTER -->
+    <!-- /footer -->
 
-    <!-- POP-UP-->
-    <section class="pop-up pop-up_type_overlay">
-      <!-- container -->
+    <!-- попап редактирования -->
+    <section class="pop-up pop-up_type_edit pop-up_type_overlay">
       <div class="pop-up__container">
-        <!-- close-button -->
         <button class="button button_type_close-button" type="button"></button>
         <p class="pop-up__title">Редактировать профиль</p>
-        <!-- form -->
-        <form class="pop-up__form" name="pop-up-form">
+        <form class="pop-up__form pop-up__form_type_edit" name="pop-up-form">
           <fieldset class="pop-up__field">
-            <input type="text" class="pop-up__edit pop-up__edit_type_name" placeholder="Имя" name="name-edit" />
-            <input type="text" class="pop-up__edit pop-up__edit_type_description" placeholder="Описание" name="description-edit" />
+            <input type="text" class="pop-up__edit pop-up__edit_type_name" placeholder="Имя" name="name-edit">
+            <input type="text" class="pop-up__edit pop-up__edit_type_description" placeholder="Описание" name="description-edit">
           </fieldset>
-          <!-- save-button -->
-          <button class="button button_type_save-button" type="submit">Сохранить</button>
+          <button class="button button__style button_type_save-button" type="submit">Сохранить</button>
         </form>
       </div>
     </section>
-    <!-- /POP-UP -->
+    <!-- /попап редактирования -->
 
-    <!-- SCRIPT -->
+    <!-- попап добавления -->
+    <section class="pop-up pop-up_type_add pop-up_type_overlay">
+      <div class="pop-up__container">
+        <button class="button button_type_close-button" type="button"></button>
+        <p class="pop-up__title">Новое место</p>
+        <form class="pop-up__form pop-up__form_type_add" name="pop-up-form">
+          <fieldset class="pop-up__field">
+            <input type="text" class="pop-up__edit pop-up__edit_type_img-name" placeholder="Название" name="img-name">
+            <input type="url" class="pop-up__edit pop-up__edit_type_link" placeholder="Ссылка на картинку" name="link">
+          </fieldset>
+          <button class="button button__style button_type_create-button" type="submit">Создать</button>
+        </form>
+      </div>
+    </section>
+    <!-- /попап добавления -->
+
+    <!-- попап изображения -->
+    <div class="pop-up pop-up_type_img pop-up_type_overlay">
+      <!-- <button class="button button__close-img button_type_close-button " type="button"></button> -->
+      <figure class="pop-up__img-container">
+        <button class="button  button_type_close-button " type="button"></button>
+        <img class="pop-up__img" src="" alt="">
+        <figcaption class="pop-up__img-caption"></figcaption>
+      </figure>
+    </div>
+    <!-- /попап изображения -->
+
+    <!-- elements-template -->
+    <template id="elements-template">
+      <div class="element">
+        <button class="button button_type_delete-button" type="button"></button>
+        <img class="element__img" src="" alt="">
+        <div class="element__items">
+          <h2 class="element__title"></h2>
+          <button class="button button_type_like-button" type="button"></button>
+        </div>
+      </div>
+    </template>
+    <!-- /elements-template -->
+
+    <!-- script -->
+    <script src="./scripts/cards.js"></script>
     <script src="./scripts/scripts.js"></script>
-    <!-- /SCRIPT -->
+    <!-- /script -->
   </body>
 </html>
