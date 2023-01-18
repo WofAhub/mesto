@@ -60,10 +60,10 @@ function createCard(element){
   const openImgButton = card.querySelector(".element__img")
   .addEventListener("click", function(){
     popUpImgImg.src = element.link;
-    popImgCaption.alt = element.name;
+    popUpImgImg.alt = element.link;
     popImgCaption.textContent = element.name;
 
-    popUpOpen(popUpImg);
+    openPopUp(popUpImg);
   });
     
   return card;
@@ -78,7 +78,7 @@ function submitCreateNewCard(evt) {
   const popUpLinkImg = popUpAddForm.querySelector(".pop-up__edit_type_link").value;
   const element = createCard({name: popUpImgName, link: popUpLinkImg});
   cardsContainer.prepend(element);
-  popUpClose(popUpAdd);
+  closePopUp(popUpAdd);
     
   popUpAddForm.reset();
 }

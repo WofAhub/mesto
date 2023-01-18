@@ -22,38 +22,38 @@ const popUpImgImg = popUpImg.querySelector(".pop-up__img");
 const popImgCaption = popUpImg.querySelector(".pop-up__img-caption");
 
 // редактировать и добавить                                // КНОПКИ    
-const editButton = document.querySelector(".button_type_edit-button");                  // кнопка редактирования
-const addButton = document.querySelector(".button_type_add-button");                    // кнопка добавления
+const buttonEdit = document.querySelector(".button_type_edit-button");                  // кнопка редактирования
+const buttonAdd = document.querySelector(".button_type_add-button");                    // кнопка добавления
 
 // закрыть
-const closeButtonImg = popUpImg.querySelector(".button_type_close-button");             // закрыть попап изображения
-const closeButtonEdit = popUpEdit.querySelector(".button_type_close-button");           // закрыть попап редактирования
-const closeButtonAdd = popUpAdd.querySelector(".button_type_close-button");             // закрыть попап добавления
+const buttonImgclose = popUpImg.querySelector(".button_type_close-button");             // закрыть попап изображения
+const buttonEditclose = popUpEdit.querySelector(".button_type_close-button");           // закрыть попап редактирования
+const buttonAddclose = popUpAdd.querySelector(".button_type_close-button");             // закрыть попап добавления
 
 
 // FUNCTIONS
 
 // активация попапов
-function popUpOpen(a) {
+function openPopUp(a) {
   a.classList.add("pop-up_type_active")
 };
 
 // дизактивация попапов
-function popUpClose(b) {
+function closePopUp(b) {
   b.classList.remove("pop-up_type_active");
 };
 
 
 // активация попапа редактирования                         // ПОПАП РЕДКТИРОВАНИЯ
-editButton.addEventListener("click", () => {
-  popUpOpen(popUpEdit);
+buttonEdit.addEventListener("click", () => {
+  openPopUp(popUpEdit);
   nameEdit.value = profileName.textContent;
   descriptionEdit.value = profileDescription.textContent;
 });
 
 // слушатель закрытия попапа редактирования
-closeButtonEdit.addEventListener("click", () => {
-  popUpClose(popUpEdit);
+buttonEditclose.addEventListener("click", () => {
+  closePopUp(popUpEdit);
 });
 
 // сохранение информации в попапе редактирования
@@ -65,7 +65,7 @@ function saveProfileInfo(evt) {
   profileName.value = "";
   profileDescription.value = "";
 
-  popUpClose(popUpEdit);
+  closePopUp(popUpEdit);
 }
 
 // слушатель сохранения в попапе редактирования
@@ -73,22 +73,22 @@ formEdit.addEventListener("submit", saveProfileInfo);
 
 
 // активация попапа добавления                             // ПОПАП ДОБАВЛЕНИЯ
-addButton.addEventListener("click", () => {
-  popUpOpen(popUpAdd);
+buttonAdd.addEventListener("click", () => {
+  openPopUp(popUpAdd);
 });
 
 // слушатель добавления карточки с помощью попапа добавления
 popUpAddForm.addEventListener("submit", submitCreateNewCard);
 
 // слушатель закрытия попапа добавления
-closeButtonAdd.addEventListener("click", () => {
-  popUpClose(popUpAdd);
+buttonAddclose.addEventListener("click", () => {
+  closePopUp(popUpAdd);
 });
 
 
 // дизактивация попапа изображения                         // ПОПАП ИЗОБРАЖЕНИЯ  
-closeButtonImg.addEventListener("click", () => {
-  popUpClose(popUpImg);
+buttonImgclose.addEventListener("click", () => {
+  closePopUp(popUpImg);
 });
 
 // рендер карточек
