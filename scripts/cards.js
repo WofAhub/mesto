@@ -60,7 +60,7 @@ function createCard(element){
   const openImgButton = card.querySelector(".element__img")
   .addEventListener("click", function(){
     popUpImgImg.src = element.link;
-    popUpImgImg.alt = element.link;
+    popUpImgImg.alt = element.name;
     popImgCaption.textContent = element.name;
 
     openPopUp(popUpImg);
