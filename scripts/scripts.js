@@ -17,9 +17,9 @@ const popUpAddForm = popUpAdd.querySelector(".pop-up__form_type_add");          
 
 // попап-содержимое popUpImg                               // ПОПАП ИЗОБРАЖЕНИЯ
 const popUpImg = document.querySelector(".pop-up_type_img");                            // главный попап изображения
-const popUpImgContainer = popUpImg.querySelector(".pop-up__img-container");
-const popUpImgImg = popUpImg.querySelector(".pop-up__img");
-const popImgCaption = popUpImg.querySelector(".pop-up__img-caption");
+const popUpImgContainer = popUpImg.querySelector(".pop-up__img-container");             // контейнер попапа изображения
+const popUpImgImg = popUpImg.querySelector(".pop-up__img");                             // изображение попапа
+const popImgCaption = popUpImg.querySelector(".pop-up__img-caption");                   // подпись к изображению 
 
 // редактировать и добавить                                // КНОПКИ    
 const buttonEdit = document.querySelector(".button_type_edit-button");                  // кнопка редактирования
