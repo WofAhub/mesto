@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./pages/index.css">
   </head>
 
+
   <body class="body page">
 
     <!-- header -->
@@ -18,7 +19,9 @@
     </header>
     <!-- /header -->
 
+
     <main class="content">
+
 
       <!-- profile -->
       <section class="profile">
@@ -32,6 +35,7 @@
       </section>
       <!-- /profile -->
 
+
       <!-- elements -->
       <section class="elements">
 
@@ -40,47 +44,123 @@
 
     </main>
 
+
     <!-- footer -->
     <footer class="footer">
       <p class="footer__copyright">&copy;&nbsp;2020 Mesto Russia</p>
     </footer>
     <!-- /footer -->
+    
 
     <!-- попап редактирования -->
-    <section class="pop-up pop-up_type_edit pop-up_type_overlay">
+    <section class="pop-up pop-up_type_profile-edit pop-up_type_overlay">
       <div class="pop-up__container">
         <button class="button button_type_close-button" type="button"></button>
         <p class="pop-up__title">Редактировать профиль</p>
-        <form class="pop-up__form pop-up__form_type_edit" name="pop-up-form">
-          <fieldset class="pop-up__field">
-            <input type="text" class="pop-up__edit pop-up__edit_type_name" placeholder="Имя" name="name-edit">
-            <input type="text" class="pop-up__edit pop-up__edit_type_description" placeholder="Описание" name="description-edit">
+        <form
+          id="form"
+          name="pop-up-form"
+          class="pop-up__form pop-up__form_type_edit"
+          novalidate>
+          <fieldset class="pop-up__fieldset">
+
+            <label class="pop-up__input-container">
+              <input 
+                id="input-profile-name"
+                name="input-profile-person-name"
+                type="text"
+                class="pop-up__input pop-up__input_type_profile-name"
+                placeholder="Имя"
+                minlength="2"
+                maxlength="40"
+                required>
+
+              <span
+                id="input-profile-errormessage-name"
+                class="pop-up__input-errormessage pop-up__input-errormessage_active">
+              </span>
+            </label>
+
+            <label class="pop-up__input-container">
+              <input
+                id="input-profile-description"
+                name="input-profile-person-description"
+                type="text"
+                class="pop-up__input pop-up__input_type_profile-description"
+                placeholder="Описание"
+                minlength="2"
+                maxlength="200"
+                required>
+
+              <span
+                id="input-profile-errormessage-description"
+                class="pop-up__input-errormessage pop-up__input-errormessage_active">
+              </span>
+            </label>  
+
           </fieldset>
-          <button class="button button_style button_type_save-button" type="submit">Сохранить</button>
+          <button class="button button_popup-style_valid button_type_save-button" type="submit">Сохранить</button>
         </form>
       </div>
     </section>
     <!-- /попап редактирования -->
 
+
     <!-- попап добавления -->
-    <section class="pop-up pop-up_type_add pop-up_type_overlay">
+    <section class="pop-up pop-up_type_card-add pop-up_type_overlay">
       <div class="pop-up__container">
         <button class="button button_type_close-button" type="button"></button>
         <p class="pop-up__title">Новое место</p>
-        <form class="pop-up__form pop-up__form_type_add" name="pop-up-form-add">
-          <fieldset class="pop-up__field">
-            <input type="text" class="pop-up__edit pop-up__edit_type_img-name" placeholder="Название" name="img-name">
-            <input type="url" class="pop-up__edit pop-up__edit_type_link" placeholder="Ссылка на картинку" name="link">
+        <form
+          id="form"
+          name="pop-up-form-add"        
+          class="pop-up__form pop-up__form_type_add"
+          novalidate>
+          <fieldset class="pop-up__fieldset">
+
+            <label class="pop-up__input-container">
+              <input 
+                id="input-add-name"
+                name="input-add-img-name"
+                type="text"
+                class="pop-up__input pop-up__input_type_img-name"
+                placeholder="Название"
+                minlength="2"
+                maxlength="30"
+                required>
+
+              <span
+                id="input-add-errormessage-name"
+                class="pop-up__input-errormessage">
+              </span>
+            </label>  
+
+            <label class="pop-up__input-container">
+              <input
+                id="input-add-url"
+                name="input-add-img-url"
+                type="url"
+                class="pop-up__input pop-up__input_type_img-url"
+                placeholder="Ссылка на картинку"
+                required>
+
+              <span
+                id="input-add-errormessage-url"
+                class="pop-up__input-errormessage">
+              </span>
+            </label>
+
           </fieldset>
-          <button class="button button_style button_type_create-button" type="submit">Создать</button>
+          <button class="button button_popup-style_valid button_type_create-button" type="submit">Создать</button>
         </form>
+
       </div>
     </section>
     <!-- /попап добавления -->
 
+
     <!-- попап изображения -->
     <div class="pop-up pop-up_type_img pop-up_type_overlay">
-      <!-- <button class="button button__close-img button_type_close-button " type="button"></button> -->
       <figure class="pop-up__img-container">
         <button class="button  button_type_close-button " type="button"></button>
         <img class="pop-up__img" src="#" alt="#">
@@ -88,6 +168,7 @@
       </figure>
     </div>
     <!-- /попап изображения -->
+
 
     <!-- elements-template -->
     <template id="elements-template">
@@ -102,7 +183,9 @@
     </template>
     <!-- /elements-template -->
 
+
     <!-- script -->
+    <script src="./scripts/validate.js"></script>
     <script src="./scripts/cards.js"></script>
     <script src="./scripts/scripts.js"></script>
     <!-- /script -->

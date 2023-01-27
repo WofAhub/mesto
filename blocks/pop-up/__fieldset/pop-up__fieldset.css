@@ -1,9 +1,9 @@
-.pop-up__field {
+.pop-up__fieldset {
   /* Экран */
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 13px;
 
   /* Текст */
   font-style: normal;
@@ -17,12 +17,12 @@
 
   /* Отступы */
   padding: 0;
-  margin: 0 0 48px 0;
+  margin: 0 0 31px 0;
 }
 
 @media screen and (max-width: 568px) {
   /* Отступы */
-  .pop-up__field {
+  .pop-up__fieldset {
     margin: 0 0 45px 0;
   }
 }

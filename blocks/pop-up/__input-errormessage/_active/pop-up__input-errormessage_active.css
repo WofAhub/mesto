@@ -1,0 +1,5 @@
+.pop-up__input-errormessage_active {
+  /* Экран */
+  visibility: visible;
+  opacity: 1;
+}

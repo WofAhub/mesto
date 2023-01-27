@@ -70,13 +70,12 @@ function createCard(element){
 }
 
 
-
 // добавить карточку
 function submitCreateNewCard(evt) {
   evt.preventDefault();
-  const popUpImgName = popUpAddForm.querySelector(".pop-up__edit_type_img-name").value;
-  const popUpLinkImg = popUpAddForm.querySelector(".pop-up__edit_type_link").value;
-  const element = createCard({name: popUpImgName, link: popUpLinkImg});
+  const popUpImgName = popUpAddForm.querySelector(".pop-up__input_type_img-name").value;
+  const popUpLinkUrl = popUpAddForm.querySelector(".pop-up__input_type_img-url").value;
+  const element = createCard({name: popUpImgName, link: popUpLinkUrl});
   cardsContainer.prepend(element);
   closePopUp(popUpAdd);
     

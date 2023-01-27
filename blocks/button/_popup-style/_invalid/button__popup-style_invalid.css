@@ -1,0 +1,14 @@
+.button_popup-style_invalid {
+  /* Экран */
+  opacity: 20%;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+
+  /* Текст */
+  color: black;
+      
+  /* Стиль */
+  background-color: transparent;
+  border: 1px solid black;
+}
