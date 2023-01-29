@@ -19,6 +19,7 @@
 .pop-up__input {
   /* Экран */
   height: 27px;
+  width: 100%;
   box-sizing: border-box;
   position: relative;
 

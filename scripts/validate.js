@@ -12,7 +12,7 @@ const formStuff = {
 const showInputError = (formElement, inputElement, errorMessage) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.add(formStuff.inputErrorClass);
-  errorElement.textContent = errorMessage.validationMessage;
+  errorElement.textContent = errorMessage;
   errorElement.classList.add(formStuff.errorClass);
 };
 
@@ -24,31 +24,7 @@ const hideInputError = (formElement, inputElement) => {
   errorElement.textContent = '';
 };
 
-// проверка на валидность и показ/скрытие ошибки
-const checkInputValidity = (formElement, inputElement) => {
-  if (!inputElement.validity.valid) {
-    showInputError(formElement, inputElement, inputElement.validationMessage);
-  } else {
-    hideInputError(formElement, inputElement);
-  }
-}; 
-
-const hasInvalidInput = (inputList) => {
-  return inputList.some((inputElement) => {
-    return !inputElement.validity.valid;
-  })
-};
-
-const toggleButtonState = (inputList, buttonElement) => {
-  if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add(formStuff.inactiveButtonClass);
-    buttonElement.disabled = true;
-  } else {
-    buttonElement.classList.remove(formStuff.inactiveButtonClass);
-    buttonElement.disabled = false;
-  }
-};
-
+// установка слушателей
 const setEventListeners = (formElement) => {
   const inputList = Array.from(formElement.querySelectorAll(formStuff.inputSelector));
   const buttonElement = formElement.querySelector(formStuff.submitButtonSelector);
@@ -64,13 +40,49 @@ const setEventListeners = (formElement) => {
   });
 };
 
+// проверка на валидность и показ/скрытие ошибки
+const checkInputValidity = (formElement, inputElement) => {
+  if (!inputElement.validity.valid) {
+    showInputError(formElement, inputElement, inputElement.validationMessage);
+  } else {
+    hideInputError(formElement, inputElement);
+  }
+};
+
+// есть ли невалидный инпут?
+const hasInvalidInput = (inputList) => {
+  return inputList.some((inputElement) => {
+    return !inputElement.validity.valid;
+  })
+};
+
+// переключение кнопки с валида-невалида
+const toggleButtonState = (inputList, buttonElement) => {
+  if (hasInvalidInput(inputList)) {
+    buttonElement.classList.add(formStuff.inactiveButtonClass);
+    buttonElement.disabled = true;
+  } else {
+    buttonElement.classList.remove(formStuff.inactiveButtonClass);
+    buttonElement.disabled = false;
+  }
+};
+
+// сброс старой валидации во время нового открытия попапов
+const resetValidation = (formElement, formStuff) => {
+
+  const inputList = Array.from(formElement.querySelectorAll(formStuff.inputSelector));
+  const buttonElement = formElement.querySelector(formStuff.submitButtonSelector);
+  toggleButtonState(inputList, buttonElement, formStuff);
+  inputList.forEach((inputElement) => {
+    hideInputError(formElement, inputElement, formStuff);
+  });
+
+};
+
+// принимающий валидацию
 const enableValidation = () => {
   const formList = Array.from(document.querySelectorAll(formStuff.formSelector));
   formList.forEach((formElement) => {
     setEventListeners(formElement);
-  });
-  const fieldsetList = Array.from(document.querySelectorAll(formStuff.fieldSet));
-  fieldsetList.forEach((fieldSet) => {
-      setEventListeners(fieldSet);
   });
 };

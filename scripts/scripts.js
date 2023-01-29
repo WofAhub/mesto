@@ -1,9 +1,5 @@
 // ПЕРЕМЕННЫЕ
 
-//ПЕРЕМЕННЫЕ
-const popUpForm = document.querySelector("#form");                                               // общая форма
-const popUpInput = popUpForm.querySelector(".pop-up__input");                                    // общие инпуты в форме
-
 // блок-содержимое profile                                 // ПРОФИЛЬ
 const profileInfo = document.querySelector(".profile__info");                        
 const profileName = profileInfo.querySelector(".profile__name");                                 // имя профиля
@@ -12,12 +8,14 @@ const profileDescription = profileInfo.querySelector(".profile__description");  
 
 // попап-содержимое popUpEdit                              // ПОПАП РЕДКТИРОВАНИЯ
 const popUpEdit = document.querySelector(".pop-up_type_profile-edit");                           // главный попап редактирования
-const descriptionEdit = popUpEdit.querySelector(".pop-up__input_type_profile-description");      // описание
 const nameEdit = popUpEdit.querySelector(".pop-up__input_type_profile-name");                    // имя
+const descriptionEdit = popUpEdit.querySelector(".pop-up__input_type_profile-description");      // описание
 const formEdit = popUpEdit.querySelector(".pop-up__form_type_edit");                             // форма
 
 // попап-содержимое popUpAdd                               // ПОПАП ДОБАВЛЕНИЯ
 const popUpAdd = document.querySelector(".pop-up_type_card-add");                                // главный попап добавления
+const nameAdd = popUpAdd.querySelector(".pop-up__input_type_img-name");                          // имя
+const urlAdd = popUpAdd.querySelector(".pop-up__input_type_img-url");                            // ссылка
 const popUpAddForm = popUpAdd.querySelector(".pop-up__form_type_add");                           // форма
 
 // попап-содержимое popUpImg                               // ПОПАП ИЗОБРАЖЕНИЯ
@@ -29,11 +27,6 @@ const popImgCaption = popUpImg.querySelector(".pop-up__img-caption");           
 // редактировать и добавить                                // КНОПКИ    
 const buttonEdit = document.querySelector(".button_type_edit-button");                           // кнопка редактирования
 const buttonAdd = document.querySelector(".button_type_add-button");                             // кнопка добавления
-
-// закрыть
-/*const buttonImgclose = popUpImg.querySelector(".button_type_close-button");                    // закрыть попап изображения
-const buttonEditclose = popUpEdit.querySelector(".button_type_close-button");                    // закрыть попап редактирования
-const buttonAddclose = popUpAdd.querySelector(".button_type_close-button");*/                    // закрыть попап добавления
 
 
 // ФУНКЦИИ
@@ -84,6 +77,7 @@ buttonEdit.addEventListener("click", () => {
   openPopUp(popUpEdit);
   nameEdit.value = profileName.textContent;
   descriptionEdit.value = profileDescription.textContent;
+  resetValidation(popUpEdit, formStuff);
 });
 
 // сохранение информации в попапе редактирования
@@ -105,6 +99,9 @@ formEdit.addEventListener("submit", saveProfileInfo);
 // активация попапа добавления                             // ПОПАП ДОБАВЛЕНИЯ
 buttonAdd.addEventListener("click", () => {
   openPopUp(popUpAdd);
+  nameAdd.value = "";
+  urlAdd.value = "";
+  resetValidation(popUpAdd, formStuff);
 });
 
 // слушатель добавления карточки с помощью попапа добавления

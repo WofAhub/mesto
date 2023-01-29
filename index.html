@@ -64,7 +64,6 @@
           novalidate>
           <fieldset class="pop-up__fieldset">
 
-            <label class="pop-up__input-container">
               <input 
                 id="input-profile-name"
                 name="input-profile-person-name"
@@ -76,12 +75,9 @@
                 required>
 
               <span
-                id="input-profile-errormessage-name"
-                class="pop-up__input-errormessage pop-up__input-errormessage_active">
+                class="pop-up__input-errormessage input-profile-name-error">
               </span>
-            </label>
 
-            <label class="pop-up__input-container">
               <input
                 id="input-profile-description"
                 name="input-profile-person-description"
@@ -93,13 +89,12 @@
                 required>
 
               <span
-                id="input-profile-errormessage-description"
-                class="pop-up__input-errormessage pop-up__input-errormessage_active">
+                class="pop-up__input-errormessage input-profile-description-error">
               </span>
-            </label>  
 
+            <!-- <button class="button button_popup-style_valid" type="submit">Сохранить</button>   -->
           </fieldset>
-          <button class="button button_popup-style_valid button_type_save-button" type="submit">Сохранить</button>
+          <button class="button button_popup-style_valid" type="submit">Сохранить</button>  
         </form>
       </div>
     </section>
@@ -118,7 +113,6 @@
           novalidate>
           <fieldset class="pop-up__fieldset">
 
-            <label class="pop-up__input-container">
               <input 
                 id="input-add-name"
                 name="input-add-img-name"
@@ -130,12 +124,9 @@
                 required>
 
               <span
-                id="input-add-errormessage-name"
-                class="pop-up__input-errormessage">
+                class="pop-up__input-errormessage input-add-name-error">
               </span>
-            </label>  
 
-            <label class="pop-up__input-container">
               <input
                 id="input-add-url"
                 name="input-add-img-url"
@@ -145,13 +136,12 @@
                 required>
 
               <span
-                id="input-add-errormessage-url"
-                class="pop-up__input-errormessage">
+                class="pop-up__input-errormessage input-add-url-error">
               </span>
-            </label>
 
+            <!-- <button class="button button_popup-style_valid" type="submit">Создать</button> -->
           </fieldset>
-          <button class="button button_popup-style_valid button_type_create-button" type="submit">Создать</button>
+          <button class="button button_popup-style_valid" type="submit">Создать</button>
         </form>
 
       </div>

@@ -63,7 +63,6 @@
 @import url(../blocks/pop-up/__fieldset/pop-up__fieldset.css);                                            /*попап-филдсет*/
 /* input */
 @import url(../blocks/pop-up/__input/pop-up__input.css);                                                  /*попап-инпуты*/
-@import url(../blocks/pop-up/__input-container/pop-up__input-container.css);                              /*то, что объединяет инпуты со спанами*/
 @import url(../blocks/pop-up/__input/_type/_error-border/pop-up__input_type_error-border.css);            /*красная полоска в инпуте, обозначающая ошибку (бордер)*/
 @import url(../blocks/pop-up/__input-errormessage/pop-up__input-errormessage.css);                        /*красный текст под инпутом, обозначающий ошибку - выключенный (спан)*/
 @import url(../blocks/pop-up/__input-errormessage/_active/pop-up__input-errormessage_active.css);         /*красный текст под инпутом, обозначающий ошибку - включенный (спан)*/
