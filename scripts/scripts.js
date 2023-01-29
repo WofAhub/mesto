@@ -27,6 +27,7 @@ const popImgCaption = popUpImg.querySelector(".pop-up__img-caption");           
 // редактировать и добавить                                // КНОПКИ    
 const buttonEdit = document.querySelector(".button_type_edit-button");                           // кнопка редактирования
 const buttonAdd = document.querySelector(".button_type_add-button");                             // кнопка добавления
+const esc = "Escape";                                                                            // кнопка esc
 
 
 // ФУНКЦИИ
@@ -35,21 +36,21 @@ const buttonAdd = document.querySelector(".button_type_add-button");            
 function openPopUp(popup) {
   popup.classList.add("pop-up_type_active");
   document.addEventListener('keydown', closePopUpByEsc);
-  document.addEventListener('click', closePopUpByOverlay);
-  document.addEventListener('click', closePopUpByButtonClose);
+  popup.addEventListener('click', closePopUpByOverlay);
+  popup.addEventListener('click', closePopUpByButtonClose);
 };
 
 // дизактивация попапов
 function closePopUp(popup) {
   popup.classList.remove("pop-up_type_active");
   document.removeEventListener('keydown', closePopUpByEsc);
-  document.removeEventListener('click', closePopUpByOverlay);
-  document.removeEventListener('click', closePopUpByButtonClose);
+  popup.removeEventListener('click', closePopUpByOverlay);
+  popup.removeEventListener('click', closePopUpByButtonClose);
 };
 
 // дизактивация попапов с помощью Esc
 function closePopUpByEsc(evt) {
-  if(evt.key === "Escape") {
+  if(evt.key === esc) {
     const popUpActive = document.querySelector('.pop-up_type_active');
     closePopUp(popUpActive);
   }
@@ -86,8 +87,7 @@ function saveProfileInfo(evt) {
   profileName.textContent = nameEdit.value;
   profileDescription.textContent = descriptionEdit.value;
 
-  profileName.value = "";
-  profileDescription.value = "";
+  formEdit.reset();
 
   closePopUp(popUpEdit);
 }
@@ -99,8 +99,7 @@ formEdit.addEventListener("submit", saveProfileInfo);
 // активация попапа добавления                             // ПОПАП ДОБАВЛЕНИЯ
 buttonAdd.addEventListener("click", () => {
   openPopUp(popUpAdd);
-  nameAdd.value = "";
-  urlAdd.value = "";
+  popUpAddForm.reset();
   resetValidation(popUpAdd, formStuff);
 });
 
