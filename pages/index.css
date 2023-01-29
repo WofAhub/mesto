@@ -23,7 +23,7 @@
 @import url(../blocks/button/_type/_edit-button/button_type_edit-button.css);                             /*кнопка для открытия поп-апа редактирования*/
 @import url(../blocks/button/_type/_add-button/button_type_add-button.css);                               /*кнопка для открытия поп-апа добавления*/
 /* element */
-@import url(../blocks/button/_type/_like-button/button_type_like-button.css);                             /*непролайкнутая кнопка поп-апа*/ 
+@import url(../blocks/button/_type/_like-button/button_type_like-button.css);                             /*непролайкнутая кнопка поп-апа*/
 @import url(../blocks/button/_type/_liked-button/button_type_liked-button.css);                           /*пролайкнутая кнопка поп-апа*/
 @import url(../blocks/button/_type/_delete-button/button_type_delete-button.css);                         /*удаляющая кнопка поп-апа*/
 /* pop-up */
