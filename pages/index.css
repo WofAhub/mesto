@@ -17,7 +17,6 @@
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__logo/header__logo.css);
 
-
 /* общие button*/                                                      /*КНОПКИ*/ 
 @import url(../blocks/button/button.css);
 /* profile */
@@ -32,7 +31,6 @@
 @import url(../blocks/button/_popup-style/_valid/button__popup-style_valid.css);
 @import url(../blocks/button/_popup-style/_invalid/button__popup-style_invalid.css);
 
-
 /*содержимое profile*/                                                 /* ПРОФИЛЬ */
 @import url(../blocks/profile/profile.css);                                                               /*профиль-главный*/
 @import url(../blocks/profile/__avatar/profile__avatar.css);                                              /*профиль-аватар*/
@@ -41,7 +39,6 @@
 @import url(../blocks/profile/__name/profile__name.css);                                                  /*профиль-имя (в профиль-контейнере)*/
 @import url(../blocks/profile/__description/profile__description.css);                                    /*профиль-описание (в профиль-контейнере)*/
 
-
 /*elements*/                                                           /* ЭЛЕМЕНТЫ */
 @import url(../blocks/elements/elements.css);                                                             /*элементы-главное (карточки)*/
 /* element */
@@ -49,7 +46,6 @@
 @import url(../blocks/element/__items/element__items.css);                                                /*элемент-главный (в карточка-контейнер)*/
 @import url(../blocks/element/__title/element__title.css);                                                /*элемент-заголовок (в карточка-контейнер)*/
 @import url(../blocks/element/__img/element__img.css);                                                    /*элемент-изображение (в карточка-контейнер)*/
-
 
 /*общее pop-up*/                                                       /* ПОП-АП */
 @import url(../blocks/pop-up/pop-up.css);                                                                 /*попап-главный*/
@@ -70,7 +66,6 @@
 @import url(../blocks/pop-up/__img-container/pop-up__img-container.css);                                  /*попап-контейнер для большого изображения*/
 @import url(../blocks/pop-up/__img-caption/pop-up__img-caption.css);                                      /*подпись под большим изображением*/
 @import url(../blocks/pop-up/__img/pop-up__img.css);                                                      /*большое изображение*/
-
 
 /*footer*/                                                             /* ФУТЕР */
 @import url(../blocks/footer/footer.css);                                                                 /*футер-главный*/
