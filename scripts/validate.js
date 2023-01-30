@@ -1,13 +1,3 @@
-// const formStuff = {
-//   formSelector: '.pop-up__form',
-//   inputSelector: '.pop-up__input',
-//   fieldSet: '.pop-up__fieldset',
-//   submitButtonSelector: '.button_popup-style_valid',
-//   inactiveButtonClass: 'button_popup-style_invalid',
-//   inputErrorClass: 'pop-up__input_type_error-border',
-//   errorClass: 'pop-up__input-errormessage_active'
-// };
-
 // показать ошибку
 const showInputError = (formElement, inputElement, errorMessage) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
