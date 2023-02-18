@@ -1,3 +1,6 @@
+import { initialCards, formStuff } from "./data.js";
+import { Card, submitCreateNewCard } from "./card.js";
+
 // ПЕРЕМЕННЫЕ
 
 // блок-содержимое profile                                 // ПРОФИЛЬ
@@ -20,9 +23,9 @@ const popUpAddForm = popUpAdd.querySelector(".pop-up__form_type_add");          
 
 // попап-содержимое popUpImg                               // ПОПАП ИЗОБРАЖЕНИЯ
 const popUpImg = document.querySelector(".pop-up_type_img");                                     // главный попап изображения
-const popUpImgContainer = popUpImg.querySelector(".pop-up__img-container");                      // контейнер попапа изображения
-const popUpImgImg = popUpImg.querySelector(".pop-up__img");                                      // изображение попапа
-const popImgCaption = popUpImg.querySelector(".pop-up__img-caption");                            // подпись к изображению
+export const popUpImgContainer = popUpImg.querySelector(".pop-up__img-container");                      // контейнер попапа изображения
+export const popUpImgImg = popUpImg.querySelector(".pop-up__img");                                      // изображение попапа
+export const popImgCaption = popUpImg.querySelector(".pop-up__img-caption");                            // подпись к изображению
 
 // редактировать и добавить                                // КНОПКИ    
 const buttonEdit = document.querySelector(".button_type_edit-button");                           // кнопка редактирования
@@ -30,15 +33,27 @@ const buttonAdd = document.querySelector(".button_type_add-button");            
 const esc = "Escape";                                                                            // кнопка esc
 
 
+
 // ФУНКЦИИ
 
+// рендер карточек
+function renderCards() {
+  initialCards.forEach((item) => {
+    const element = new Card(item, '.elements-template');
+    const cardElement = element.generateCard();
+
+    // Добавляем в DOM
+    document.querySelector('.elements').append(cardElement);
+  });
+}
+
 // активация попапов
-function openPopUp(popup) {
+export default function openPopUp(popup) {
   popup.classList.add("pop-up_type_active");
   document.addEventListener('keydown', closePopUpByEsc);
   popup.addEventListener('click', closePopUpByOverlay);
   popup.addEventListener('click', closePopUpByButtonClose);
-};
+}
 
 // дизактивация попапов
 function closePopUp(popup) {
@@ -46,7 +61,7 @@ function closePopUp(popup) {
   document.removeEventListener('keydown', closePopUpByEsc);
   popup.removeEventListener('click', closePopUpByOverlay);
   popup.removeEventListener('click', closePopUpByButtonClose);
-};
+}
 
 // дизактивация попапов с помощью Esc
 function closePopUpByEsc(evt) {
@@ -106,15 +121,5 @@ buttonAdd.addEventListener("click", () => {
 // слушатель добавления карточки с помощью попапа добавления
 popUpAddForm.addEventListener("submit", submitCreateNewCard);
 
- 
-// рендер карточек                                         // ПОПАП ИЗОБРАЖЕНИЯ 
-function renderCards(){
-  initialCards.forEach(item => {
-    const cardHTML = createCard(item);
-
-    cardsContainer.append(cardHTML);
-  });
-}
-
-renderCards();
+renderCards()
 enableValidation();

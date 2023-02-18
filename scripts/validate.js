@@ -1,3 +1,5 @@
+export class FormValidate {
+  constructor()
 // показать ошибку
 const showInputError = (formElement, inputElement, errorMessage) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
@@ -76,3 +78,4 @@ const enableValidation = () => {
     setEventListeners(formElement);
   });
 };
+}

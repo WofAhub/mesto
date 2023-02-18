@@ -1,6 +1,6 @@
 // КАРТОЧКИ
 
-const initialCards = [
+export const initialCards = [
   {
     name: 'Две девушки',
     link: 'https://jimmymarble.com/wp-content/uploads/2018/09/OPEN-FIELD-1014-2-768x1152.jpg'
@@ -29,7 +29,7 @@ const initialCards = [
 
 // ВАЛИДАЦИЯ
 
-const formStuff = {
+export const formStuff = {
   formSelector: '.pop-up__form',
   inputSelector: '.pop-up__input',
   fieldSet: '.pop-up__fieldset',
