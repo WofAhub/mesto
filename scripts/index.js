@@ -1,54 +1,53 @@
-import { initialCards, formStuff } from "./data.js";
-import { Card, submitCreateNewCard } from "./card.js";
+// ИМПОРТЫ
 
-// ПЕРЕМЕННЫЕ
+import { 
+  cardsContainer,  
+  profileName, 
+  profileDescription, 
+  popUpEdit,
+  popUpAdd,
+  popUpAddForm,
+  nameEdit,
+  descriptionEdit,
+  formEdit,
+  buttonEdit,
+  buttonAdd,
+  esc,
+  initialCards,
+  formStuff,
+  popUpImgImg,
+  popImgCaption,
+  popUpImg,
+  popUpImgName,
+  popUpLinkUrl
+} from "./data.js";
 
-// блок-содержимое profile                                 // ПРОФИЛЬ
-const profileInfo = document.querySelector(".profile__info");                        
-const profileName = profileInfo.querySelector(".profile__name");                                 // имя профиля
-const profileDescription = profileInfo.querySelector(".profile__description");                   // описание профиля
-
-
-// попап-содержимое popUpEdit                              // ПОПАП РЕДКТИРОВАНИЯ
-const popUpEdit = document.querySelector(".pop-up_type_profile-edit");                           // главный попап редактирования
-const nameEdit = popUpEdit.querySelector(".pop-up__input_type_profile-name");                    // имя
-const descriptionEdit = popUpEdit.querySelector(".pop-up__input_type_profile-description");      // описание
-const formEdit = popUpEdit.querySelector(".pop-up__form_type_edit");                             // форма
-
-// попап-содержимое popUpAdd                               // ПОПАП ДОБАВЛЕНИЯ
-const popUpAdd = document.querySelector(".pop-up_type_card-add");                                // главный попап добавления
-const nameAdd = popUpAdd.querySelector(".pop-up__input_type_img-name");                          // имя
-const urlAdd = popUpAdd.querySelector(".pop-up__input_type_img-url");                            // ссылка
-const popUpAddForm = popUpAdd.querySelector(".pop-up__form_type_add");                           // форма
-
-// попап-содержимое popUpImg                               // ПОПАП ИЗОБРАЖЕНИЯ
-const popUpImg = document.querySelector(".pop-up_type_img");                                     // главный попап изображения
-export const popUpImgContainer = popUpImg.querySelector(".pop-up__img-container");                      // контейнер попапа изображения
-export const popUpImgImg = popUpImg.querySelector(".pop-up__img");                                      // изображение попапа
-export const popImgCaption = popUpImg.querySelector(".pop-up__img-caption");                            // подпись к изображению
-
-// редактировать и добавить                                // КНОПКИ    
-const buttonEdit = document.querySelector(".button_type_edit-button");                           // кнопка редактирования
-const buttonAdd = document.querySelector(".button_type_add-button");                             // кнопка добавления
-const esc = "Escape";                                                                            // кнопка esc
-
+import FormValidate from "./validate.js";
+import Card from "./card.js";
 
 
 // ФУНКЦИИ
 
-// рендер карточек
-function renderCards() {
+// генерация карточек                                      // ГЕНЕРАЦИЯ КАРТОЧЕК
+function generateCardInCardsContainer() {
   initialCards.forEach((item) => {
-    const element = new Card(item, '.elements-template');
-    const cardElement = element.generateCard();
-
-    // Добавляем в DOM
-    document.querySelector('.elements').append(cardElement);
+    const newCard = new Card(item, '.elements-template');
+    const cardElement = newCard.generateCard();
+  
+    cardsContainer.append(cardElement);
   });
 }
 
+// подключение валидации к попапу Редактирования
+const formValidatorProfile = new FormValidate(formStuff, formEdit);
+formValidatorProfile.enableValidation();
+
+// подключение валидации к попапу Добавления
+const formValidatorInputsForm = new FormValidate(formStuff, popUpAddForm);
+formValidatorInputsForm.enableValidation();
+
 // активация попапов
-export default function openPopUp(popup) {
+function openPopUp(popup) {
   popup.classList.add("pop-up_type_active");
   document.addEventListener('keydown', closePopUpByEsc);
   popup.addEventListener('click', closePopUpByOverlay);
@@ -93,7 +92,7 @@ buttonEdit.addEventListener("click", () => {
   openPopUp(popUpEdit);
   nameEdit.value = profileName.textContent;
   descriptionEdit.value = profileDescription.textContent;
-  resetValidation(popUpEdit, formStuff);
+  // resetValidation(popUpEdit);
 });
 
 // сохранение информации в попапе редактирования
@@ -115,11 +114,34 @@ formEdit.addEventListener("submit", saveProfileInfo);
 buttonAdd.addEventListener("click", () => {
   openPopUp(popUpAdd);
   popUpAddForm.reset();
-  resetValidation(popUpAdd, formStuff);
+  // resetValidation(popUpAdd);
 });
+
+// активация попапа с изображением                         // ПОПАП ИЗОБРАЖЕНИЯ
+export default function openPopUpImg(name, link) {
+  popUpImgImg.src = link;
+  popUpImgImg.alt = name;
+  popImgCaption.textContent = name;
+
+  openPopUp(popUpImg);
+}
+
+// добавить карточку                                       // ДОБАВИТЬ КАРТОЧКУ
+function submitCreateNewCard(evt) {
+  evt.preventDefault();
+  const newCardAdd = generateCardInCardsContainer({
+    name: popUpImgName.value, 
+    link: popUpLinkUrl.value
+  });
+
+  cardsContainer.prepend(newCardAdd);   
+  closePopUp(popUpAdd);
+  popUpAddForm.reset();
+}
 
 // слушатель добавления карточки с помощью попапа добавления
 popUpAddForm.addEventListener("submit", submitCreateNewCard);
 
-renderCards()
-enableValidation();
+
+generateCardInCardsContainer();                            // ГЕНЕРАЦИЯ КАРТОЧЕК И ВАЛИДАЦИЯ
+// enableValidation();

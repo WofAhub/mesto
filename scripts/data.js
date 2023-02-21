@@ -1,3 +1,38 @@
+// ПЕРЕМЕННЫЕ
+
+// место для карт    
+export const cardsContainer = document.querySelector(".elements");
+
+// блок-содержимое profile                                 // ПРОФИЛЬ
+export const profileInfo = document.querySelector(".profile__info");                                    // главный блок профиля   
+export const profileName = profileInfo.querySelector(".profile__name");                                 // имя профиля
+export const profileDescription = profileInfo.querySelector(".profile__description");                   // описание профиля
+
+
+// попап-содержимое popUpEdit                              // ПОПАП РЕДКТИРОВАНИЯ
+export const popUpEdit = document.querySelector(".pop-up_type_profile-edit");                           // главный попап редактирования
+export const nameEdit = popUpEdit.querySelector(".pop-up__input_type_profile-name");                    // имя
+export const descriptionEdit = popUpEdit.querySelector(".pop-up__input_type_profile-description");      // описание
+export const formEdit = popUpEdit.querySelector(".pop-up__form_type_edit");                             // форма
+
+// попап-содержимое popUpAdd                               // ПОПАП ДОБАВЛЕНИЯ
+export const popUpAdd = document.querySelector(".pop-up_type_card-add");                                // главный попап добавления
+export const popUpAddForm = popUpAdd.querySelector(".pop-up__form_type_add");                           // форма
+export const popUpImgName = popUpAddForm.querySelector(".pop-up__input_type_img-name");                 //название изображения 
+export const popUpLinkUrl = popUpAddForm.querySelector(".pop-up__input_type_img-url");                  //ссылка
+
+// попап-содержимое popUpImg                               // ПОПАП ИЗОБРАЖЕНИЯ
+export const popUpImg = document.querySelector(".pop-up_type_img");                                     // главный попап изображения
+export const popUpImgImg = popUpImg.querySelector(".pop-up__img");                                      // изображение попапа
+export const popImgCaption = popUpImg.querySelector(".pop-up__img-caption");                            // подпись к изображению
+
+// редактировать и добавить                                // КНОПКИ    
+export const buttonEdit = document.querySelector(".button_type_edit-button");                           // кнопка редактирования
+export const buttonAdd = document.querySelector(".button_type_add-button");                             // кнопка добавления
+export const esc = "Escape";                                                                            // кнопка esc
+
+
+
 // КАРТОЧКИ
 
 export const initialCards = [
@@ -26,6 +61,8 @@ export const initialCards = [
     link: 'https://jimmymarble.com/wp-content/uploads/2018/09/OPEN-FIELD-3137-768x1152.jpg'
   }
 ];
+
+
 
 // ВАЛИДАЦИЯ
 
