@@ -92,7 +92,7 @@ buttonEdit.addEventListener("click", () => {
   openPopUp(popUpEdit);
   nameEdit.value = profileName.textContent;
   descriptionEdit.value = profileDescription.textContent;
-  // resetValidation(popUpEdit);
+  formValidatorProfile.resetValidation(popUpEdit);
 });
 
 // сохранение информации в попапе редактирования
@@ -114,7 +114,7 @@ formEdit.addEventListener("submit", saveProfileInfo);
 buttonAdd.addEventListener("click", () => {
   openPopUp(popUpAdd);
   popUpAddForm.reset();
-  // resetValidation(popUpAdd);
+  formValidatorInputsForm.resetValidation(popUpAdd);
 });
 
 // активация попапа с изображением                         // ПОПАП ИЗОБРАЖЕНИЯ
@@ -126,15 +126,25 @@ export default function openPopUpImg(name, link) {
   openPopUp(popUpImg);
 }
 
-// добавить карточку                                       // ДОБАВИТЬ КАРТОЧКУ
+// генерация новой карточки                                // ДОБАВИТЬ КАРТОЧКУ
+function createCard(item) {
+  const newCardGen = new Card(item, '.elements-template');
+  const cardElement = newCardGen.generateCard();
+  return cardElement;
+}
+
+// принять добавление новой карточки
 function submitCreateNewCard(evt) {
   evt.preventDefault();
-  const newCardAdd = generateCardInCardsContainer({
+
+  const newCardAdd = {
     name: popUpImgName.value, 
     link: popUpLinkUrl.value
-  });
+  };
 
-  cardsContainer.prepend(newCardAdd);   
+  const NewCardActivate = createCard(newCardAdd);
+
+  cardsContainer.prepend(NewCardActivate);   
   closePopUp(popUpAdd);
   popUpAddForm.reset();
 }
@@ -144,4 +154,3 @@ popUpAddForm.addEventListener("submit", submitCreateNewCard);
 
 
 generateCardInCardsContainer();                            // ГЕНЕРАЦИЯ КАРТОЧЕК И ВАЛИДАЦИЯ
-// enableValidation();
