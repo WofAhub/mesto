@@ -31,6 +31,9 @@ export const buttonEdit = document.querySelector(".button_type_edit-button");   
 export const buttonAdd = document.querySelector(".button_type_add-button");                             // кнопка добавления
 export const esc = "Escape";                                                                            // кнопка esc
 
+// формы
+// export const forms = document.forms(".pop-up__form");
+
 
 
 // КАРТОЧКИ
@@ -73,5 +76,5 @@ export const formStuff = {
   submitButtonSelector: '.button_popup-style_valid',
   inactiveButtonClass: 'button_popup-style_invalid',
   inputErrorClass: 'pop-up__input_type_error-border',
-  errorClass: 'pop-up__input-errormessage_active'
+  errorClass: 'pop-up__input-errormessage_active',
 };
