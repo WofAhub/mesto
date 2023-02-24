@@ -69,25 +69,12 @@ resetValidation() {
   this._toggleButtonState();
 
   this._inputList.forEach((inputElement) => {
-    this._hideInputError(inputElement, this._buttonElement);
+    this._hideInputError(inputElement);
   });
 }
 
 // принимающий валидацию
 enableValidation() {
-  const formList = Array.from(document.querySelectorAll(this._formSelector));
-  const buttonSubmit = this._formElement.querySelector(this._submitButtonSelector);
-  const fieldsetList = Array.from(this._formElement.querySelectorAll(this._fieldSet));
-
-
-  this._formElement.addEventListener("submit", (evt) => {
-    evt.preventDefault();
-    this._toggleButtonState(formList, buttonSubmit, this._formStuff.inactiveButtonClass);
-  });
-
-  fieldsetList.forEach((fieldSet) => {
-    this._setEventListeners(fieldSet);
-  });
   this._setEventListeners();
   }
 }

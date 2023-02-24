@@ -1,12 +1,11 @@
-// ИМПОРТЫ
-
+// импорт из data                                          // ИМПОРТЫ
 import { 
   cardsContainer,  
   profileName, 
   profileDescription, 
   popUpEdit,
   popUpAdd,
-  popUpAddForm,
+  formAdd,
   nameEdit,
   descriptionEdit,
   formEdit,
@@ -22,8 +21,9 @@ import {
   popUpLinkUrl
 } from "./data.js";
 
-import FormValidate from "./validate.js";
-import Card from "./card.js";
+// импорты из validate и card
+import FormValidate from "./FormValidate.js";
+import Card from "./Card.js";
 
 
 // ФУНКЦИИ
@@ -31,10 +31,7 @@ import Card from "./card.js";
 // генерация карточек                                      // ГЕНЕРАЦИЯ КАРТОЧЕК
 function generateCardInCardsContainer() {
   initialCards.forEach((item) => {
-    const newCard = new Card(item, '.elements-template');
-    const cardElement = newCard.generateCard();
-  
-    cardsContainer.append(cardElement);
+    cardsContainer.append(createCard(item));
   });
 }
 
@@ -43,10 +40,11 @@ const formValidatorProfile = new FormValidate(formStuff, formEdit);
 formValidatorProfile.enableValidation();
 
 // подключение валидации к попапу Добавления
-const formValidatorInputsForm = new FormValidate(formStuff, popUpAddForm);
+const formValidatorInputsForm = new FormValidate(formStuff, formAdd);
 formValidatorInputsForm.enableValidation();
 
-// активация попапов
+
+// активация попапов                                       // ПОПАПЫ
 function openPopUp(popup) {
   popup.classList.add("pop-up_type_active");
   document.addEventListener('keydown', closePopUpByEsc);
@@ -73,16 +71,14 @@ function closePopUpByEsc(evt) {
 // дизактивация попапов с помощью оверлей
 function closePopUpByOverlay(evt) {
   if (evt.target.classList.contains('pop-up_type_overlay')) {
-    const popUpActive = document.querySelector('.pop-up_type_active');
-    closePopUp(popUpActive);
+    closePopUp(evt.target);
   }
 }
 
 // дизактивация попапов с помощью крестика
 function closePopUpByButtonClose(evt) {
   if (evt.target.classList.contains('button_type_close-button')) {
-    const popUpActive = document.querySelector('.pop-up_type_active');
-    closePopUp(popUpActive);
+    closePopUp(evt.currentTarget);
   }
 }
 
@@ -92,7 +88,7 @@ buttonEdit.addEventListener("click", () => {
   openPopUp(popUpEdit);
   nameEdit.value = profileName.textContent;
   descriptionEdit.value = profileDescription.textContent;
-  formValidatorProfile.resetValidation(popUpEdit);
+  formValidatorProfile.resetValidation();
 });
 
 // сохранение информации в попапе редактирования
@@ -100,8 +96,6 @@ function saveProfileInfo(evt) {
   evt.preventDefault();
   profileName.textContent = nameEdit.value;
   profileDescription.textContent = descriptionEdit.value;
-
-  formEdit.reset();
 
   closePopUp(popUpEdit);
 }
@@ -113,18 +107,21 @@ formEdit.addEventListener("submit", saveProfileInfo);
 // активация попапа добавления                             // ПОПАП ДОБАВЛЕНИЯ
 buttonAdd.addEventListener("click", () => {
   openPopUp(popUpAdd);
-  popUpAddForm.reset();
-  formValidatorInputsForm.resetValidation(popUpAdd);
+
+  formAdd.reset();
+  formValidatorInputsForm.resetValidation();
 });
 
+
 // активация попапа с изображением                         // ПОПАП ИЗОБРАЖЕНИЯ
-export default function openPopUpImg(name, link) {
+export default function handleCardClick(name, link) {
   popUpImgImg.src = link;
   popUpImgImg.alt = name;
   popImgCaption.textContent = name;
 
   openPopUp(popUpImg);
 }
+
 
 // генерация новой карточки                                // ДОБАВИТЬ КАРТОЧКУ
 function createCard(item) {
@@ -142,15 +139,14 @@ function submitCreateNewCard(evt) {
     link: popUpLinkUrl.value
   };
 
-  const NewCardActivate = createCard(newCardAdd);
+  const newCard = createCard(newCardAdd);
 
-  cardsContainer.prepend(NewCardActivate);   
+  cardsContainer.prepend(newCard);   
   closePopUp(popUpAdd);
-  popUpAddForm.reset();
 }
 
 // слушатель добавления карточки с помощью попапа добавления
-popUpAddForm.addEventListener("submit", submitCreateNewCard);
+formAdd.addEventListener("submit", submitCreateNewCard);
 
 
-generateCardInCardsContainer();                            // ГЕНЕРАЦИЯ КАРТОЧЕК И ВАЛИДАЦИЯ
+generateCardInCardsContainer();                            // ВЫЗОВ ГЕНЕРАЦИИ КАРТОЧЕК

@@ -11,15 +11,15 @@ export const profileDescription = profileInfo.querySelector(".profile__descripti
 
 // попап-содержимое popUpEdit                              // ПОПАП РЕДКТИРОВАНИЯ
 export const popUpEdit = document.querySelector(".pop-up_type_profile-edit");                           // главный попап редактирования
+export const formEdit = document.forms["pop-up-form"];                                                  // форма
 export const nameEdit = popUpEdit.querySelector(".pop-up__input_type_profile-name");                    // имя
 export const descriptionEdit = popUpEdit.querySelector(".pop-up__input_type_profile-description");      // описание
-export const formEdit = popUpEdit.querySelector(".pop-up__form_type_edit");                             // форма
 
 // попап-содержимое popUpAdd                               // ПОПАП ДОБАВЛЕНИЯ
 export const popUpAdd = document.querySelector(".pop-up_type_card-add");                                // главный попап добавления
-export const popUpAddForm = popUpAdd.querySelector(".pop-up__form_type_add");                           // форма
-export const popUpImgName = popUpAddForm.querySelector(".pop-up__input_type_img-name");                 //название изображения 
-export const popUpLinkUrl = popUpAddForm.querySelector(".pop-up__input_type_img-url");                  //ссылка
+export const formAdd = document.forms["pop-up-form-add"];                                               // форма
+export const popUpImgName = formAdd.querySelector(".pop-up__input_type_img-name");                      //название изображения 
+export const popUpLinkUrl = formAdd.querySelector(".pop-up__input_type_img-url");                       //ссылка
 
 // попап-содержимое popUpImg                               // ПОПАП ИЗОБРАЖЕНИЯ
 export const popUpImg = document.querySelector(".pop-up_type_img");                                     // главный попап изображения
@@ -30,10 +30,6 @@ export const popImgCaption = popUpImg.querySelector(".pop-up__img-caption");    
 export const buttonEdit = document.querySelector(".button_type_edit-button");                           // кнопка редактирования
 export const buttonAdd = document.querySelector(".button_type_add-button");                             // кнопка добавления
 export const esc = "Escape";                                                                            // кнопка esc
-
-// формы
-// export const forms = document.forms(".pop-up__form");
-
 
 
 // КАРТОЧКИ

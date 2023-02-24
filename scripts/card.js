@@ -1,12 +1,12 @@
-import openPopUpImg from "./index.js";
-
+import handleCardClick from "./index.js";
 export default class Card {
-  constructor(data, selectTemplate) {
+  constructor(data, selectTemplate, handleCardClick) {
     this._link = data.link;
     this._name = data.name;
     this._selectTemplate = selectTemplate;
+    this._handleCardClick = handleCardClick;
   }
-
+  
   // клонирование из темплейта
   _getTemplate() {
     const card = document
@@ -21,24 +21,22 @@ export default class Card {
   _setEventListeners() {
     // слушатель: открытие изображения
     this._elementImg.addEventListener("click", () => {
-      openPopUpImg(this._name, this._link);
+      handleCardClick(this._name, this._link);
     });
 
     // слушатель: лайк
-    this._buttonLike = this._element.querySelector(".button_type_like-button");
     this._buttonLike.addEventListener("click", () => {
-      this._likeCard();
+      this._togglelike();
     });
 
     // слушатель: удалить карточку
-    this._deleteButton = this._element.querySelector(".button_type_delete-button")
-    .addEventListener("click", () => {
+    this._deleteButton.addEventListener("click", () => {
       this._deleteCard();
     });
   }
 
   // лайк
-  _likeCard() {
+  _togglelike() {
     this._buttonLike.classList.toggle("button_type_liked-button");
   }
 
@@ -50,6 +48,8 @@ export default class Card {
   generateCard() {
     this._element = this._getTemplate();
 
+    this._deleteButton = this._element.querySelector(".button_type_delete-button");
+    this._buttonLike = this._element.querySelector(".button_type_like-button");
     this._elementImg = this._element.querySelector('.element__img');
     this._elementTitle = this._element.querySelector('.element__title');
 
