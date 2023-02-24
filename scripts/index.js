@@ -22,7 +22,7 @@ import {
 } from "./data.js";
 
 // импорты из validate и card
-import FormValidate from "./FormValidate.js";
+import FormValidator from "./FormValidator.js";
 import Card from "./Card.js";
 
 
@@ -36,11 +36,11 @@ function generateCardInCardsContainer() {
 }
 
 // подключение валидации к попапу Редактирования
-const formValidatorProfile = new FormValidate(formStuff, formEdit);
+const formValidatorProfile = new FormValidator(formStuff, formEdit);
 formValidatorProfile.enableValidation();
 
 // подключение валидации к попапу Добавления
-const formValidatorInputsForm = new FormValidate(formStuff, formAdd);
+const formValidatorInputsForm = new FormValidator(formStuff, formAdd);
 formValidatorInputsForm.enableValidation();
 
 
