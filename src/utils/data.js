@@ -3,6 +3,8 @@
 // место для карт    
 export const cardsContainer = document.querySelector(".elements");
 
+export const elementImg = document.querySelector(".element__img");
+
 // блок-содержимое profile                                 // ПРОФИЛЬ
 export const profileInfo = document.querySelector(".profile__info");                                    // главный блок профиля   
 export const profileName = profileInfo.querySelector(".profile__name");                                 // имя профиля
@@ -24,7 +26,7 @@ export const popUpLinkUrl = formAdd.querySelector(".pop-up__input_type_img-url")
 // попап-содержимое popUpImg                               // ПОПАП ИЗОБРАЖЕНИЯ
 export const popUpImg = document.querySelector(".pop-up_type_img");                                     // главный попап изображения
 export const popUpImgImg = popUpImg.querySelector(".pop-up__img");                                      // изображение попапа
-export const popImgCaption = popUpImg.querySelector(".pop-up__img-caption");                            // подпись к изображению
+export const popUpImgCaption = popUpImg.querySelector(".pop-up__img-caption");                            // подпись к изображению
 
 // редактировать и добавить                                // КНОПКИ    
 export const buttonEdit = document.querySelector(".button_type_edit-button");                           // кнопка редактирования

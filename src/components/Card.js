@@ -1,16 +1,15 @@
-import handleCardClick from "./index.js";
 export default class Card {
-  constructor(data, selectTemplate, handleCardClick) {
+  constructor({data, handleCardClick, templateSelector}) {
     this._link = data.link;
     this._name = data.name;
-    this._selectTemplate = selectTemplate;
+    this._templateSelector = templateSelector;
     this._handleCardClick = handleCardClick;
   }
   
   // клонирование из темплейта
   _getTemplate() {
     const card = document
-    .querySelector(this._selectTemplate)
+    .querySelector(this._templateSelector)
     .content
     .querySelector(".element")
     .cloneNode(true);
@@ -21,7 +20,7 @@ export default class Card {
   _setEventListeners() {
     // слушатель: открытие изображения
     this._elementImg.addEventListener("click", () => {
-      handleCardClick(this._name, this._link);
+      this._handleCardClick(this._name, this._link);
     });
 
     // слушатель: лайк
