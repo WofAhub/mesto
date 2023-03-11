@@ -1,4 +1,4 @@
-// импорты из components
+// импорты из components                                                                // ИМПОРТЫ
 import Section from "../components/Section.js";
 import FormValidator from "../components/FormValidator.js";
 import Card from "../components/Card.js";
@@ -6,7 +6,7 @@ import PopupWithForm from "../components/PopupWithForm.js";
 import PopupWithImage from "../components/PopupWithImage.js";
 import UserInfo from "../components/UserInfo.js";
 
-// импорт из data                                                                // ИМПОРТЫ
+// импорт из data
 import { 
   buttonEdit,
   buttonAdd,
@@ -27,7 +27,7 @@ import {
 
 // ФУНКЦИИ
 
-// генерация карточек                                                            // ГЕНЕРАЦИЯ КАРТОЧЕК И ЭКЗЕМПЛЯРЫ
+// генерация карточек                                                                   // ГЕНЕРАЦИЯ КАРТОЧЕК
 const cardsGen = new Section({
   data: initialCards,
   renderer: (item) => {
@@ -41,58 +41,85 @@ const createCard = (data) => {
     data: data,
     templateSelector: '.elements-template',
     handleCardClick: (link, name) => {
-      const popup = new PopupWithImage(popUpImg);
-      popup.open(link, name);
-      popup.setEventListeners();
+      newPopupImg.open(link, name, popUpImg);
     },
   });
   const cardElement = card.generateCard();
   return cardElement;
 }
 
-// экземпляр попапа Большого изображения                                         // ЭКЗЕМПЛЯР БОЛЬШОГО ИЗОБРАЖЕНИЯ
-const popupEditOpen = new PopupWithImage(popUpEdit);
-popupEditOpen.setEventListeners();
+// попап изображения                                                                    // ЭКЗЕМПЛЯР ИЗОБРАЖЕНИЯ
+const newPopupImg = new PopupWithImage(popUpImg);
+newPopupImg.setEventListeners();
 
-// экземпляр валидации на попапе Профиля                                         // ЭКЗЕМПЛЯРЫ ПРОФИЛЯ
-const formValidatorProfile = new FormValidator(formStuff, formEdit);
-formValidatorProfile.enableValidation();
 
-// экземпляр попапа Профиля
-const newPopupWithFormProfile = new PopupWithForm(popUpEdit);
-newPopupWithFormProfile.setEventListeners();
 
-// экземпляр валидации на попапе Добавления                                      // ЭКЗЕМПЛЯРЫ ДОбАВЛЕНИЯ
-const formValidatorAdd = new FormValidator(formStuff, formAdd);
-formValidatorAdd.enableValidation();
 
-// экземпляр попапа Добавления
-const popupWithFormAdd = new PopupWithForm(popUpAdd);
-popupWithFormAdd.setEventListeners();
 
-// экземпляр-функция попапа Добавления
-const newCardAdd = new PopupWithForm({
-  popupSelector: popUpAdd,
-  formSubmit: (formData) => {
-    cardsGen.addItem(createCard(formData));
-    newCardAdd.close()
-  }
-})
 
-const userInfo = new UserInfo({
-  name: profileName,
-  description: profileDescription
-});
 
-function openEditProfile() {
-  const { title, subtitle } = userInfo.getUserInfo()
-  nameEdit.value = title
-  descriptionEdit.value = subtitle
 
-  formValidatorProfile.open()
-}
 
-newCardAdd.setEventListeners();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const newCardAdd = new PopupWithForm({
+//   popupSelector: popUpAdd,
+//   formSubmit: (formData) => {
+//     cardsGen.addItem(createCard(formData));
+//     newCardAdd.close();
+//   }
+// });
+
+// newCardAdd.setEventListeners();
+
+// buttonAdd.addEventListener("click", () => {
+//   newCardAdd.open()
+// });
+
+
+// // экземпляр валидации на попапе Профиля                                         // ЭКЗЕМПЛЯРЫ ПРОФИЛЯ
+// const formValidatorProfile = new FormValidator(formStuff, formEdit);
+// formValidatorProfile.enableValidation();
+
+// // экземпляр попапа Профиля
+// function openPopupAdd () {
+//   newPopupWithFormProfile.open();
+//   newPopupWithFormProfile.setEventListeners();
+// }
+// const newPopupWithFormProfile = new PopupWithForm(popUpAdd);
+
+// // экземпляр валидации на попапе Добавления                                      // ЭКЗЕМПЛЯРЫ ДОбАВЛЕНИЯ
+// const formValidatorAdd = new FormValidator(formStuff, formAdd);
+// formValidatorAdd.enableValidation();
+
+// // экземпляр попапа Добавления
+// const popupWithFormAdd = new PopupWithForm(popUpAdd);
+// popupWithFormAdd.setEventListeners();
+
+// // экземпляр-функция попапа Добавления
+// buttonAdd.addEventListener("click", openPopupAdd);
+
+
+// const userInfo = new UserInfo({
+//   name: profileName,
+//   description: profileDescription
+// });
+
+// newCardAdd.setEventListeners();
 
 
 

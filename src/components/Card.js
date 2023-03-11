@@ -20,7 +20,7 @@ export default class Card {
   _setEventListeners() {
     // слушатель: открытие изображения
     this._elementImg.addEventListener("click", () => {
-      this._handleCardClick(this._name, this._link);
+      this._handleCardClick(this._link, this._name);
     });
 
     // слушатель: лайк
