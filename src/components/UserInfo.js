@@ -1,15 +1,14 @@
 export default class UserInfo {
-  constructor(name, description) {
+  constructor({name, description}) {
     this._name = name;
     this._description = description;
   }
 
   getUserInfo() {
-    const userInfo = {
+    return {
       name: this._name.textContent,
       description: this._description.textContent
-    }
-    return userInfo;
+    };
   }
 
   setUserInfo({name, description}) {

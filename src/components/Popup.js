@@ -7,15 +7,14 @@ export default class Popup {
 
   // открытие попапа
   open() {
-    this._popupSelector.classList.add(".pop-up_type_active");
-    this.setEventListeners();
-    document.addEventListener(`keydown`, this._handleEscClose);
+    this._popupSelector.classList.add("pop-up_type_active");
+    document.addEventListener("keydown", this._handleEscClose);
   }
 
   // закрытие попапа
   close() {
-    this._popupSelector.classList.remove(".pop-up_type_active");
-    document.removeEventListener(`keydown`, this._handleEscClose);
+    this._popupSelector.classList.remove("pop-up_type_active");
+    document.removeEventListener("keydown", this._handleEscClose);
   }
 
   // закрытие по клавише esc
@@ -27,11 +26,11 @@ export default class Popup {
 
   // слушатели закрытия по крестику и оверлею
   setEventListeners() {
-    this._popupSelector.addEventListener(`mousedown`, (evt) => {
-      if (evt.target.classList.contains('button_type_close-button')) {
+    this._popupSelector.addEventListener("mousedown", (evt) => {
+      if (evt.target.classList.contains("button_type_close-button")) {
         this.close(evt.currentTarget);
       }
-      if (evt.target.classList.contains('pop-up_type_overlay')) {
+      if (evt.target.classList.contains("pop-up_type_overlay")) {
         this.close(evt.target);
       }
     });
