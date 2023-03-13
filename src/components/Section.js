@@ -1,7 +1,7 @@
 import { cardsContainer } from "../utils/data.js";
 
 export default class Section {
-  constructor ( { data, renderer }) {
+  constructor ({ data, renderer }) {
     this._initialCards = data;
     this._renderer = renderer;
     this._container = cardsContainer;

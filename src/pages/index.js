@@ -22,9 +22,9 @@ import {
   popUpImg,
   profileName,
   profileDescription,
-  popUpImgName,
-  popUpLinkUrl
 } from "../utils/data.js";
+
+
 
 
 // ФУНКЦИИ
@@ -50,32 +50,34 @@ const createCard = (data) => {
   return cardElement;
 }
 
+
+
+
 // экземпляр Юзера                                                                      // ПРОФИЛЬ
 const newUserInfo = new UserInfo({
   name: profileName,
   description: profileDescription
 });
 
+// экземпляр попапа Профиля
+const newPopupProfile = new PopupWithForm(popUpEdit, (data) => {
+  newUserInfo.setUserInfo(data);
+});
+newPopupProfile.setEventListeners();
+
 // открыть попап Профиля
 buttonEdit.addEventListener("click", () => {
   newPopupProfile.open();
   const data = newUserInfo.getUserInfo();
-
+  
   nameEdit.value = data.name;
   descriptionEdit.value = data.description;
 
   formValidatorProfile.resetValidation();
 });
-
-// сохранение изменений в Профиле
-const submitProfile = (name, description) => {
-  newUserInfo.setUserInfo(name, description);
-};
-
-// экземпляр попапа Профиля
-const newPopupProfile = new PopupWithForm(popUpEdit, submitProfile);
-newPopupProfile.setEventListeners();
    
+
+
 
 // открыть попап Добавления                                                             // ДОБАВЛЕНИЕ
 buttonAdd.addEventListener("click", () => {
@@ -87,6 +89,9 @@ buttonAdd.addEventListener("click", () => {
 // экземпляр попапа Добавления
 const newPopupAdd = new PopupWithForm(popUpAdd);
 newPopupAdd.setEventListeners();
+
+
+
 
 // подключение валидации к попапу Профиля                                               // ВАЛИДАЦИЯ
 const formValidatorProfile = new FormValidator(formStuff, formEdit);

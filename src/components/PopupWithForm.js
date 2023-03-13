@@ -5,13 +5,12 @@ export default class PopupWithForm extends Popup {
     super(popupSelector);
 
     this._formSubmit = formSubmit;
-    this._form = document.querySelector(".pop-up__form");
+    this._form = this._popupSelector.querySelector(".pop-up__form");
+    this._inputList = Array.from(this._form.querySelectorAll(".pop-up__input"));
   }
 
   // данные из формы
   _getInputValues() {
-    this._inputList = this._form.querySelectorAll(".pop-up__input");
-
     this._formValues = {};
 
     this._inputList.forEach(input => {
