@@ -1,3 +1,4 @@
+
 export default class UserInfo {
   constructor({name, description}) {
     this._name = name;
@@ -11,8 +12,8 @@ export default class UserInfo {
     }
   }
 
-  setUserInfo({name, description}) {
-    this._name.textContent = name;
-    this._description.textContent = description;
+  setUserInfo(inputValues) {
+    this._name.textContent = inputValues;
+    this._description.textContent = inputValues;
   }
 }

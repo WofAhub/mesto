@@ -1,5 +1,5 @@
 export default class Card {
-  constructor({data, handleCardClick, templateSelector}) {
+  constructor({data, templateSelector, handleCardClick}) {
     this._link = data.link;
     this._name = data.name;
     this._templateSelector = templateSelector;
@@ -44,6 +44,7 @@ export default class Card {
     this._element.remove();
   }
 
+  // генерация карточек
   generateCard() {
     this._element = this._getTemplate();
 

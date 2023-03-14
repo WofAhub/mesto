@@ -41,7 +41,7 @@ const cardsGen = new Section({
 const createCard = (data) => {
   const card = new Card({
     data: data,
-    templateSelector: '.elements-template',
+    templateSelector: ".elements-template",
     handleCardClick: (link, name) => {
       newPopupImg.open(link, name);
     },
@@ -59,11 +59,10 @@ const newUserInfo = new UserInfo({
   description: profileDescription
 });
 
-// экземпляр попапа Профиля
-const newPopupProfile = new PopupWithForm(popUpEdit, (data) => {
-  newUserInfo.setUserInfo(data);
-});
-newPopupProfile.setEventListeners();
+// сохранить изменения в попапе Профиля
+const submitProfile = (inputValues) => {
+  newUserInfo.setUserInfo(inputValues);
+}
 
 // открыть попап Профиля
 buttonEdit.addEventListener("click", () => {
@@ -75,6 +74,10 @@ buttonEdit.addEventListener("click", () => {
 
   formValidatorProfile.resetValidation();
 });
+
+// экземпляр попапа Профиля с сохранением
+const newPopupProfile = new PopupWithForm(popUpEdit, submitProfile);
+newPopupProfile.setEventListeners();
    
 
 
@@ -86,8 +89,16 @@ buttonAdd.addEventListener("click", () => {
   formValidatorInputsForm.resetValidation();
 })
 
-// экземпляр попапа Добавления
-const newPopupAdd = new PopupWithForm(popUpAdd);
+// принять изменения в попапе Добавления
+const submitAdd = (data) => {
+  cardsContainer.prepend(createCard({
+    name: data.name,
+    link: data.link
+  }));
+}
+
+// экземпляр попапа Добавления с сохранением
+const newPopupAdd = new PopupWithForm(popUpAdd, submitAdd);
 newPopupAdd.setEventListeners();
 
 
