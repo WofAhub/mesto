@@ -55,8 +55,8 @@ const createCard = (data) => {
 
 // экземпляр Юзера                                                                      // ПРОФИЛЬ
 const newUserInfo = new UserInfo({
-  name: profileName,
-  description: profileDescription
+  nameUser: profileName,
+  descriptionUser: profileDescription
 });
 
 // сохранить изменения в попапе Профиля
@@ -73,6 +73,7 @@ buttonEdit.addEventListener("click", () => {
   descriptionEdit.value = data.description;
 
   formValidatorProfile.resetValidation();
+  console.log(data);
 });
 
 // экземпляр попапа Профиля с сохранением

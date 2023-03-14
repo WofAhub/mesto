@@ -5,6 +5,7 @@ export const cardsContainer = document.querySelector(".elements");
 
 export const elementImg = document.querySelector(".element__img");
 
+
 // блок-содержимое profile                                 // ПРОФИЛЬ
 export const profileInfo = document.querySelector(".profile__info");                                    // главный блок профиля   
 export const profileName = profileInfo.querySelector(".profile__name");                                 // имя профиля
