@@ -7,8 +7,7 @@
     <meta name="keywords" content="html,css,grid">
     <meta name="author" content="Андрей">
     <title>Mesto</title>
-    <link rel="icon" type="image" href="./images/fl.png">
-    <link rel="stylesheet" href="./style/index.css">
+    <link rel="icon" type="image" href="<%=require('./images/fl.png')%>">
   </head>
 
 
@@ -16,7 +15,7 @@
 
     <!-- header -->
     <header class="header">
-      <img class="header__logo" src="./images/logo.svg" alt="лого">
+      <img class="header__logo" src="<%=require('./images/logo.svg')%>" alt="лого">
     </header>
     <!-- /header -->
 
@@ -26,7 +25,7 @@
 
       <!-- profile -->
       <section class="profile">
-        <img class="profile__avatar" src="./images/Avatar.png" alt="аватар">
+        <img class="profile__avatar" src="<%=require('./images/Avatar.png')%>" alt="аватар">
         <div class="profile__info">
           <h1 class="profile__name">Jimmy Marble</h1>
           <p class="profile__description">Фотограф и режиссер</p>

@@ -1,3 +1,5 @@
+import '../style/index.css';
+
 // импорты из components                                                                // ИМПОРТЫ
 import Section from "../components/Section.js";
 import FormValidator from "../components/FormValidator.js";
