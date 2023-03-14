@@ -1,21 +1,21 @@
 import {esc} from "../utils/data.js"
 
 export default class Popup {
-  constructor(popupSelector) {
-    this._popupSelector = popupSelector;
-    this._btnClose = this._popupSelector.querySelector(".button_type_close-button");
+  constructor(popupElement) {
+    this._popupElement = popupElement;
+    this._btnClose = this._popupElement.querySelector(".button_type_close-button");
     this._escClose = this._handleEscClose.bind(this);
   }
 
   // открытие попапа
   open() {
-    this._popupSelector.classList.add("pop-up_type_active");
+    this._popupElement.classList.add("pop-up_type_active");
     document.addEventListener("keydown", this._escClose);
   }
 
   // закрытие попапа
   close() {
-    this._popupSelector.classList.remove("pop-up_type_active");
+    this._popupElement.classList.remove("pop-up_type_active");
     document.removeEventListener("keydown", this._escClose);
   }
 
@@ -32,9 +32,9 @@ export default class Popup {
       this.close();
     });
     
-    this._popupSelector.addEventListener("mousedown", (evt) => {
+    this._popupElement.addEventListener("mousedown", (evt) => {
       if (evt.target.classList.contains("pop-up_type_overlay")) {
-        this.close(evt.target);
+        this.close();
       }
     });
   }

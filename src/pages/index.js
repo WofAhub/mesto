@@ -25,17 +25,14 @@ import {
   profileName,
   profileDescription,
 } from "../utils/data.js";
-
-
-
-
+ 
 // ФУНКЦИИ
 
 // генерация карточек                                                                   // ГЕНЕРАЦИЯ КАРТОЧЕК
-const cardsGen = new Section({
+const cardsList = new Section({
   data: initialCards,
   renderer: (item) => {
-    cardsGen.addItem(createCard(item));
+    cardsList.addItem(createCard(item));
   },
 }, cardsContainer);
 
@@ -45,15 +42,12 @@ const createCard = (data) => {
     data: data,
     templateSelector: ".elements-template",
     handleCardClick: (link, name) => {
-      newPopupImg.open(link, name);
+      popupImage.open(link, name);
     },
   });
   const cardElement = card.generateCard();
   return cardElement;
 }
-
-
-
 
 // экземпляр Юзера                                                                      // ПРОФИЛЬ
 const newUserInfo = new UserInfo({
@@ -68,44 +62,37 @@ const submitProfile = (inputValues) => {
 
 // открыть попап Профиля
 buttonEdit.addEventListener("click", () => {
-  newPopupProfile.open();
+  popupEditProfile.open();
   const data = newUserInfo.getUserInfo();
   
   nameEdit.value = data.name;
   descriptionEdit.value = data.description;
 
   formValidatorProfile.resetValidation();
-  console.log(data);
 });
 
 // экземпляр попапа Профиля с сохранением
-const newPopupProfile = new PopupWithForm(popUpEdit, submitProfile);
-newPopupProfile.setEventListeners();
+const popupEditProfile = new PopupWithForm(popUpEdit, submitProfile);
+popupEditProfile.setEventListeners();
    
-
-
-
 // открыть попап Добавления                                                             // ДОБАВЛЕНИЕ
 buttonAdd.addEventListener("click", () => {
-  newPopupAdd.open();
+  popupAddCard.open();
   formAdd.reset();
   formValidatorInputsForm.resetValidation();
 })
 
 // принять изменения в попапе Добавления
-const submitAdd = (data) => {
-  cardsContainer.prepend(createCard({
+const submitAddCardForm = (data) => {
+  cardsList.addItemPrepend(createCard({
     name: data.name,
     link: data.link
   }));
 }
 
 // экземпляр попапа Добавления с сохранением
-const newPopupAdd = new PopupWithForm(popUpAdd, submitAdd);
-newPopupAdd.setEventListeners();
-
-
-
+const popupAddCard = new PopupWithForm(popUpAdd, submitAddCardForm);
+popupAddCard.setEventListeners();
 
 // подключение валидации к попапу Профиля                                               // ВАЛИДАЦИЯ
 const formValidatorProfile = new FormValidator(formStuff, formEdit);
@@ -116,7 +103,7 @@ const formValidatorInputsForm = new FormValidator(formStuff, formAdd);
 formValidatorInputsForm.enableValidation();
 
 // экземпляр попапа Изображений
-const newPopupImg = new PopupWithImage(popUpImg);
-newPopupImg.setEventListeners();
+const popupImage = new PopupWithImage(popUpImg);
+popupImage.setEventListeners();
 
-cardsGen.renderItems();                                                                 // ВЫЗОВ ГЕНЕРАЦИИ КАРТОЧЕК
+cardsList.renderItems();                                                                 // ВЫЗОВ ГЕНЕРАЦИИ КАРТОЧЕК

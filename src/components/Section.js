@@ -1,10 +1,8 @@
-import { cardsContainer } from "../utils/data.js";
-
 export default class Section {
   constructor ({ data, renderer }) {
     this._initialCards = data;
     this._renderer = renderer;
-    this._container = cardsContainer;
+    this._container = document.querySelector(".elements");
   }
 
   renderItems() {
@@ -15,5 +13,9 @@ export default class Section {
 
   addItem(element) {
     this._container.append(element);
+  }
+
+  addItemPrepend(element){
+    this._container.prepend(element);
   }
 }
