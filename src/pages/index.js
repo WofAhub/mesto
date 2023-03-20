@@ -1,7 +1,6 @@
 import '../style/index.css';
 let userId;
 
-
 /* -------------- Импорты --------------- */
 
 // импорты из components
@@ -61,15 +60,6 @@ Promise.all([
   console.log(`Ошибка в функции Promise.all: ${err}`);
 });
 
-// вставляю карточки
-api.getInitialCards()
-  .then((initialCards) => {
-    cardsList.addItem(createCard(initialCards))
-  })
-  .catch((err) => {
-    console.log(`Ошибка в функции api.getInitialCards: ${err}`)
-  });
-
 
 /* -------------- Функции --------------- */
 
@@ -84,7 +74,8 @@ const createCard = (data) => {
     userId: userId,
     handleRemoveDeleteIcon: (id) => {
       popupDelete.open();
-      popupDelete.submitDeleteCardfromServer(() => {
+      popupDelete.setNewHandler(() => {
+        popupDelete.deleting(true);
         api.deleteCard(id)
         .then(() => {
           popupDelete.close();
@@ -92,6 +83,9 @@ const createCard = (data) => {
         })
         .catch((err) => {
           console.log(`Ошибка в функции createCard, в "handleRemoveDeleteIcon": ${err}`);
+        })
+        .finally(() => {
+          popupDelete.deleting(false);
         })
       })
     },
@@ -146,10 +140,17 @@ const userInfo = new UserInfo({
 
 // сохранить изменения в попапе Профиля
 const submitProfile = (data) => {
+  popupEditProfile.loading(true);
   api.editUserInfo(data)
   .then((data) => {
     userInfo.setUserInfo(data);
     popupEditProfile.close();
+  })
+  .catch((err) => {
+    console.log(`Ошибка в функции submitProfile: ${err}`);
+  })
+  .finally(() => {
+    popupEditProfile.loading(false);
   })
 }
 
