@@ -2,8 +2,7 @@ import {esc} from "../utils/data.js"
 
 export default class Popup {
   constructor(popupElement) {
-    this._popupElement = popupElement;
-    this._btnClose = this._popupElement.querySelector(".button_type_close-button");
+    this._popupElement =  popupElement;
     this._escClose = this._handleEscClose.bind(this);
   }
 
@@ -28,7 +27,8 @@ export default class Popup {
 
   // слушатели закрытия по крестику и оверлею
   setEventListeners() {
-    this._btnClose.addEventListener("click", () => {
+    this._buttonClose = this._popupElement.querySelector(".button_type_close-button");
+    this._buttonClose.addEventListener("click", () => {
       this.close();
     });
     

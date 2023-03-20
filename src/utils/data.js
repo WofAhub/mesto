@@ -3,14 +3,11 @@
 // место для карт    
 export const cardsContainer = document.querySelector(".elements");
 
-export const elementImg = document.querySelector(".element__img");
-
-
 // блок-содержимое profile                                 // ПРОФИЛЬ
 export const profileInfo = document.querySelector(".profile__info");                                    // главный блок профиля   
 export const profileName = profileInfo.querySelector(".profile__name");                                 // имя профиля
 export const profileDescription = profileInfo.querySelector(".profile__description");                   // описание профиля
-
+export const profileAvatar = document.querySelector(".profile__avatar");                                    // аватар профиля
 
 // попап-содержимое popUpEdit                              // ПОПАП РЕДКТИРОВАНИЯ
 export const popUpEdit = document.querySelector(".pop-up_type_profile-edit");                           // главный попап редактирования
@@ -27,42 +24,51 @@ export const popUpLinkUrl = formAdd.querySelector(".pop-up__input_type_img-url")
 // попап-содержимое popUpImg                               // ПОПАП ИЗОБРАЖЕНИЯ
 export const popUpImg = document.querySelector(".pop-up_type_img");                                     // главный попап изображения
 export const popUpImgImg = popUpImg.querySelector(".pop-up__img");                                      // изображение попапа
-export const popUpImgCaption = popUpImg.querySelector(".pop-up__img-caption");                            // подпись к изображению
+export const popUpImgCaption = popUpImg.querySelector(".pop-up__img-caption");                          // подпись к изображению
+
+// попап-содержимое popUpAvatar                            // ПОПАП АВАТАРА
+export const popUpAvatar = document.querySelector(".pop-up_type_profile-avatar");                       // главный попап аватара
+export const formAvatar = document.forms["pop-up-form-avatar"];                                         //форма
+
+//попап-содержимое popUpDelete                             // ПОПАП УДАЛЕНИЯ
+export const popUpDelete = document.querySelector(".pop-up_type_delete");                               // главный попап удаления
 
 // редактировать и добавить                                // КНОПКИ    
 export const buttonEdit = document.querySelector(".button_type_edit-button");                           // кнопка редактирования
 export const buttonAdd = document.querySelector(".button_type_add-button");                             // кнопка добавления
+export const buttonAvatar = document.querySelector(".profile__avatar-button");                          // кнопка аватара
+export const buttonDelete = document.querySelector(".button_type_delete-button");                       // кнопка удаления
 export const esc = "Escape";                                                                            // кнопка esc
 
 
 // КАРТОЧКИ
 
-export const initialCards = [
-  {
-    name: 'Две девушки',
-    link: 'https://jimmymarble.com/wp-content/uploads/2018/09/OPEN-FIELD-1014-2-768x1152.jpg'
-  },
-  {
-    name: 'Многоручка',
-    link: 'https://www.collater.al/wp-content/uploads/2018/07/I-lavori-nostalgici-e-psichedelici-di-Dana-Trippe-Collater.al-5-682x1024.jpg'
-  },
-  {
-    name: 'Большая шляпа',
-    link: 'https://jimmymarble.com/wp-content/uploads/2018/09/OPEN-FIELD-1450-920x1197.jpg'
-  },
-  {
-    name: 'Белая роза в руках',
-    link: 'https://jimmymarble.com/wp-content/uploads/2018/09/OPEN-FIELD-3249-768x1152.jpg'
-  },
-  {
-    name: 'Девушка',
-    link: 'https://jimmymarble.com/wp-content/uploads/2018/09/OPEN-FIELD-2368-768x1152.jpg'
-  },
-  {
-    name: 'Девушка с отражением',
-    link: 'https://jimmymarble.com/wp-content/uploads/2018/09/OPEN-FIELD-3137-768x1152.jpg'
-  }
-];
+// export const initialCards = [
+//   {
+//     name: 'Две девушки',
+//     link: 'https://jimmymarble.com/wp-content/uploads/2018/09/OPEN-FIELD-1014-2-768x1152.jpg'
+//   },
+//   {
+//     name: 'Многоручка',
+//     link: 'https://www.collater.al/wp-content/uploads/2018/07/I-lavori-nostalgici-e-psichedelici-di-Dana-Trippe-Collater.al-5-682x1024.jpg'
+//   },
+//   {
+//     name: 'Большая шляпа',
+//     link: 'https://jimmymarble.com/wp-content/uploads/2018/09/OPEN-FIELD-1450-920x1197.jpg'
+//   },
+//   {
+//     name: 'Белая роза в руках',
+//     link: 'https://jimmymarble.com/wp-content/uploads/2018/09/OPEN-FIELD-3249-768x1152.jpg'
+//   },
+//   {
+//     name: 'Девушка',
+//     link: 'https://jimmymarble.com/wp-content/uploads/2018/09/OPEN-FIELD-2368-768x1152.jpg'
+//   },
+//   {
+//     name: 'Девушка с отражением',
+//     link: 'https://jimmymarble.com/wp-content/uploads/2018/09/OPEN-FIELD-3137-768x1152.jpg'
+//   }
+// ];
 
 
 

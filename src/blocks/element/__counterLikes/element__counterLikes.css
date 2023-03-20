@@ -1,0 +1,15 @@
+.element__counterLikes {
+  /* Текст */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+
+  /* Отступы */
+  padding: 0;
+  margin: 3px 0 0 2px;
+
+  /* Расположение */
+  z-index: 1;
+}

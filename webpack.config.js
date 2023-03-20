@@ -44,5 +44,6 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
-  ]
+  ],
+  devtool: 'eval-source-map'
 }

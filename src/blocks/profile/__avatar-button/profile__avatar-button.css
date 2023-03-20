@@ -1,0 +1,24 @@
+.profile__avatar-button{
+  /* Экран */
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  z-index: 2;
+
+  /* Стиль */
+  background-image: url(../../../images/avatar-button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+  opacity: 0;
+  cursor: pointer;
+
+  /* Анимация */
+  transition: .5s ease;
+}
+
+.profile__avatar-button:hover {
+  opacity: .8;
+  background-color: #000;
+}

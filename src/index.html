@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Пятая проектная работа Андрея на Яндекс.Практикуме">
+    <meta name="description" content="Девятая проектная работа Андрея на Яндекс.Практикуме">
     <meta name="keywords" content="html,css,grid">
     <meta name="author" content="Андрей">
     <title>Mesto</title>
@@ -25,10 +25,11 @@
 
       <!-- profile -->
       <section class="profile">
-        <img class="profile__avatar" src="<%=require('./images/Avatar.png')%>" alt="аватар">
+        <img class="profile__avatar" src="<%=require('./images/LoadingAvatar.gif')%>" alt="аватар">
+        <button class="profile__avatar-button" type="button"></button>
         <div class="profile__info">
-          <h1 class="profile__name">Jimmy Marble</h1>
-          <p class="profile__description">Фотограф и режиссер</p>
+          <h1 class="profile__name">Имя</h1>
+          <p class="profile__description">Описание</p>
           <button class="button button_type_edit-button" type="button"></button>
         </div>
         <button class="button button_type_add-button" type="button"></button>
@@ -80,7 +81,7 @@
 
               <input
                 id="input-profile-description"
-                name="description"
+                name="about"
                 type="text"
                 class="pop-up__input pop-up__input_type_profile-description"
                 placeholder="Описание"
@@ -146,6 +147,54 @@
     </section>
     <!-- /попап добавления -->
 
+    <!-- попап аватара -->
+    <section class="pop-up pop-up_type_profile-avatar pop-up_type_overlay">
+      <div class="pop-up__container">
+        <button class="button button_type_close-button" type="button"></button>
+        <p class="pop-up__title">Обновить аватар</p>
+        <form
+          id="form-avatar"
+          name="pop-up-form-avatar"        
+          class="pop-up__form pop-up__form_type_avatar"
+          novalidate>
+          <fieldset class="pop-up__fieldset">
+
+              <input
+                id="input-avatar-url"
+                name="avatar"
+                type="url"
+                class="pop-up__input pop-up__input_type_avatar-url"
+                placeholder="Ссылка на картинку"
+                required>
+
+              <span
+                class="pop-up__input-errormessage input-avatar-url-error">
+              </span>
+
+          </fieldset>
+          <button class="button button_popup-style_valid" type="submit">Сохранить</button>
+        </form>
+
+      </div>
+    </section>
+    <!-- /попап аватара -->
+
+    <!-- попап удаления -->
+    <section class="pop-up pop-up_type_delete pop-up_type_overlay">
+      <div class="pop-up__container">
+        <button class="button button_type_close-button" type="button"></button>
+        <p class="pop-up__title">Удалить?</p>
+        <form
+          id="form-delete"
+          name="pop-up-form-delete"        
+          class="pop-up__form pop-up__form_type_delete"
+          novalidate>
+          <button class="button button_popup-style_valid" type="submit">Да</button>
+        </form>
+      </div>
+    </section>
+    <!-- /попап удаления -->
+
 
     <!-- попап изображения -->
     <div class="pop-up pop-up_type_img pop-up_type_overlay">
@@ -165,7 +214,10 @@
         <img class="element__img" src="#" alt="#">
         <div class="element__items">
           <h2 class="element__title"></h2>
-          <button class="button button_type_like-button" type="button"></button>
+          <div class="element__container">
+            <button class="button button_type_like-button" type="button"></button>
+            <span class="element__counterLikes">0</span>
+          </div>
         </div>
       </div>
     </template>
