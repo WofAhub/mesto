@@ -3,6 +3,7 @@ let userId;
 
 
 /* -------------- Импорты --------------- */
+
 // импорты из components
 import Api from '../components/Api.js';
 import Section from "../components/Section.js";
@@ -55,12 +56,18 @@ Promise.all([
   userInfo.setUserInfo(user);
   userId = user._id;
   cardsList.renderItems(initialCards);
+})
+.catch((err) => {
+  console.log(`Ошибка в функции Promise.all: ${err}`);
 });
 
 // вставляю карточки
 api.getInitialCards()
   .then((initialCards) => {
     cardsList.addItem(createCard(initialCards))
+  })
+  .catch((err) => {
+    console.log(`Ошибка в функции api.getInitialCards: ${err}`)
   });
 
 

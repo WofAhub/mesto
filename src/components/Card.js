@@ -9,7 +9,7 @@ export default class Card {
     this._handleCardClick = handleCardClick;
     
     this._userId = userId; //id юзера
-    this._isOwnerCard = userId === data.owner._id; //id владельца карточки
+    this._isOwnerCard = data.owner._id === userId; //id владельца карточки
 
     this._handleRemoveDeleteIcon = handleRemoveDeleteIcon;
     this._handleSetLike = handleSetLike;
@@ -55,6 +55,7 @@ export default class Card {
     this._buttonLike.classList.toggle("button_type_liked-button");
   }
 
+  // счетчик лайков
   _counterLikesUpdaiter() {
     this._counterLikes.textContent = this._likes.length;
   }
@@ -94,6 +95,7 @@ export default class Card {
     this._elementImg.src = this._link;
     this._elementImg.alt = this._name;
     this._elementTitle.textContent = this._name;
+
 
     this._setEventListeners();
     this._hasDeleteButton();
